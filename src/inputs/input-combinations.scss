@@ -1,0 +1,63 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '../style/index';
+
+@mixin iui-icon-overlay {
+  position: relative;
+  width: 100%;
+
+  > .iui-input {
+    padding-right: $iui-l * 2;
+  }
+
+  > .iui-borderless {
+    position: absolute;
+    right: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@mixin iui-input-combo {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  // Button placed at end
+  > .iui-input,
+  > .iui-icon-overlay > .iui-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    padding-right: 0;
+
+    > .iui-borderless {
+      border-radius: 0;
+    }
+  }
+
+  > .iui-input + .iui-button,
+  > .iui-icon-overlay + .iui-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+
+  // Select placed at front
+  > .iui-select {
+    width: auto;
+
+    > .iui-select-button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    + .iui-input,
+    + .iui-icon-overlay > .iui-input {
+      border-radius: 0 $iui-border-radius $iui-border-radius 0;
+      border-left: none;
+      border-right: 1px solid;
+
+    }
+  }
+}

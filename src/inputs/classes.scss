@@ -33,3 +33,11 @@
 .iui-menu {
   @include iui-menu;
 }
+
+.iui-icon-overlay {
+  @include iui-icon-overlay;
+}
+
+.iui-input-combo {
+  @include iui-input-combo;
+}
