@@ -390,38 +390,42 @@
       <br />
 
       <!-- Icon overlay text field w/ select at front -->
-      <div class="iui-input-combo">
-        <div class="iui-select">
-          <div
-            class="iui-select-button"
-            tabindex="0"
-          >
-            <span class="iui-content">Apps</span>
+      <label class="iui-input-container">
+        <div class="iui-label">Search</div>
+        <div class="iui-input-combo">
+          <div class="iui-select">
+            <div
+              class="iui-select-button"
+              tabindex="0"
+            >
+              <span class="iui-content">Apps</span>
+            </div>
+          </div>
+
+          <div class="iui-icon-overlay">
+            <input
+              class="iui-input"
+              placeholder="MicroStation"
+            />
+            <button
+              class="iui-button iui-borderless"
+              aria-label="Search"
+            >
+              <!-- Use search.svg from generic-icons package. -->
+              <svg
+                class="iui-icon"
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m11 9.7c.7-1 1.1-2.2 1.1-3.5.1-3.5-2.7-6.2-6-6.2-3.4 0-6.1 2.7-6.1 6.1s2.7 6.1 6.1 6.1c1.3 0 2.5-.4 3.5-1.1l4.9 4.9 1.4-1.4zm-5 .5c-2.3 0-4.1-1.8-4.1-4.1s1.8-4.1 4.1-4.1 4.1 1.8 4.1 4.1-1.8 4.1-4.1 4.1"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-
-        <div class="iui-icon-overlay">
-          <input
-            class="iui-input"
-            placeholder="Search…"
-          />
-          <button
-            class="iui-button iui-borderless"
-            aria-label="Search"
-          >
-            <!-- Use search.svg from generic-icons package. -->
-            <svg
-              class="iui-icon"
-              aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m11 9.7c.7-1 1.1-2.2 1.1-3.5.1-3.5-2.7-6.2-6-6.2-3.4 0-6.1 2.7-6.1 6.1s2.7 6.1 6.1 6.1c1.3 0 2.5-.4 3.5-1.1l4.9 4.9 1.4-1.4zm-5 .5c-2.3 0-4.1-1.8-4.1-4.1s1.8-4.1 4.1-4.1 4.1 1.8 4.1 4.1-1.8 4.1-4.1 4.1"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+        <div class="iui-message">Search across the entire Bentley Systems application catalog.</div>
+      </label>
     </section>
   </body>
 </html>
