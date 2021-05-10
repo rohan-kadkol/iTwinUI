@@ -1,0 +1,296 @@
+<!--
+  Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+  See LICENSE.md in the project root for license terms and full copyright notice.
+-->
+<!DOCTYPE html>
+<html id="theme">
+  <head>
+    <title>Permissions | iTwinUI</title>
+    <link
+      rel="icon"
+      href="../assets/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/global.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/button.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/text.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/user-icon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/permission.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/css/tooltip.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/demo.css"
+    />
+    <style>
+      .iui-theme-light body { background-color: #F8F9FB !important; }
+      .iui-theme-dark body { background-color: #4F5D65 !important; }
+
+      .left {
+        top: -5px;
+        right: 100%;
+        margin-right: 5px;
+      }
+    </style>
+    <script src="../assets/theme.js"></script>
+  </head>
+  <body>
+    <theme-button></theme-button>
+    <div class="iui-permission">
+      <div class="iui-user-exchange">
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #73C7C1;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <svg
+          class="iui-icon"
+          viewBox="0 0 16 16"
+        >
+          <path d="m5 15-3.78125-3.5 3.78125-3.5v2h8v3h-8zm6-7 3.78125-3.5-3.78125-3.5v2h-8v3h8z" />
+        </svg>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="iTwin Synchronization service"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            SS
+          </abbr>
+          <img
+            src="https://connectoricons-prod.azureedge.net/bentley/icon_1.0.1356.2026.png"
+            alt="iTwin Synchronization service"
+          />
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+      <h1>Permission request</h1>
+      <p><strong>iTwin Synchronization service</strong>&nbsp;wants to access the following information:</p>
+
+      <ul>
+        <li>
+          <span>Username</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>Email address</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>User profile</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>Organization information</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>iModels</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>Product configuration settings</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span>ProjectWise share</span>
+          <span class="iui-more-information">
+            <svg
+              class="iui-tooltip-container"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.02352,8.02352,0,0,0,8,0ZM9.2,3.2a.92336.92336,0,0,1,1,.9A1.30936,1.30936,0,0,1,8.9,5.3a.94477.94477,0,0,1-1-1A1.22815,1.22815,0,0,1,9.2,3.2Zm-2,9.6c-.5,0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5,0-.5-.2-.1-.9.2-1.3.5l-.2-.5A6.49723,6.49723,0,0,1,9.1,6.6c.5,0,.6.6.3,1.6l-.7,2.6c-.1.5-.1.6.1.6a2.00284,2.00284,0,0,0,1.1-.6l.3.4A5.76883,5.76883,0,0,1,7.2,12.8Z"
+              />
+            </svg>
+            <span class="iui-tooltip left">Hello, I'm a tooltip!</span>
+          </span>
+        </li>
+        <li>
+          <span><a
+              class="iui-anchor"
+              href="#"
+            >and 5 more</a></span>
+        </li>
+      </ul>
+
+      <p class="iui-tos">By clicking "Accept" you agree to&nbsp;<a
+          class="iui-anchor"
+          href="#"
+        >Bentley System's terms of
+          service</a>.<br /><svg
+          class="iui-icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M13,7V4.71A4.71,4.71,0,0,0,8.29,0H7.72A4.74,4.74,0,0,0,3,4.72V7H2v9H14V7ZM7.5,2h1A2.52,2.52,0,0,1,11,4.51V7H5V4.5A2.5,2.5,0,0,1,7.5,2ZM8.8,14H7.3l.2-2.2A1,1,0,0,1,7,11a1.08,1.08,0,0,1,1-1,1.08,1.08,0,0,1,1,1,.89.89,0,0,1-.5.8Z"
+          />
+        </svg>Secure transaction by Bentley Systems.</p>
+
+      <div class="iui-input-bar">
+        <button class="iui-button iui-large iui-high-visibility">
+          <span class="iui-label">Accept</span>
+        </button>
+        <button class="iui-button iui-large">
+          <span class="iui-label">Decline</span>
+        </button>
+      </div>
+    </div>
+
+    <footer
+      class="iui-legal-footer"
+      style="position: fixed; bottom: 11px; left: 0;"
+    >
+      <ul>
+        <li>
+          ©&nbsp;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          &nbsp;Bentley Systems, Incorporated
+          <span class="iui-separator"></span>
+        </li>
+        <li>
+          <a
+            class="iui-anchor"
+            href="https://connect-agreementportal.bentley.com/AgreementApp/Home/Eula/view/readonly/BentleyConnect"
+            target="_blank"
+          >
+            Terms of service
+          </a>
+          <span class="iui-separator"></span>
+        </li>
+        <li>
+          <a
+            class="iui-anchor"
+            href="https://www.bentley.com/en/privacy-policy"
+            target="_blank"
+          >
+            Privacy
+          </a>
+          <span class="iui-separator"></span>
+        </li>
+        <li>
+          <a
+            class="iui-anchor"
+            href="https://www.bentley.com/en/terms-of-use-and-select-online-agreement"
+            target="_blank"
+          >
+            Terms of use
+          </a>
+          <span class="iui-separator"></span>
+        </li>
+        <li>
+          <a
+            class="iui-anchor"
+            href="https://www.bentley.com/en/cookie-policy"
+            target="_blank"
+          >
+            Cookies
+          </a>
+          <span class="iui-separator"></span>
+        </li>
+        <li>
+          <a
+            class="iui-anchor"
+            href="https://connect.bentley.com/Legal"
+            target="_blank"
+          >
+            Legal notices
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '../style/index';
+@import '../text/index';
+@import '../icon/index';
+@import '../tooltip/index';
+
+@mixin iui-permission {
+  @include iui-reset;
+  @include iui-font-family;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: $iui-line-height $iui-3xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: $iui-elevation-2;
+  border-radius: $iui-border-radius;
+  line-height: $iui-line-height;
+  width: 33vw;
+  min-width: $iui-xxl * 8;
+  box-sizing: border-box;
+  @include themed {
+    background-color: t(iui-color-background-1);
+  }
+
+  @media screen and (max-width: 512px) {
+    min-width: 100vw;
+    border-radius: 0;
+  }
+
+  > .iui-user-exchange {
+    display: flex;
+    align-items: center;
+    margin-bottom: $iui-line-height;
+
+    > .iui-icon {
+      width: $iui-icons-xl;
+      height: $iui-icons-xl;
+      margin: 0 $iui-s;
+      @include themed {
+        fill: t(iui-icons-color);
+      }
+    }
+  }
+
+  > p > strong {
+    user-select: all;
+  }
+
+  > ul {
+    @include iui-permission-list;
+  }
+
+  > .iui-tos {
+    font-size: $iui-font-size-small;
+    @include themed {
+      color: t(iui-text-color-muted);
+    }
+
+    > a {
+      white-space: nowrap;
+    }
+
+    > .iui-icon {
+      width: $iui-icons-small;
+      height: $iui-icons-small;
+      margin-right: $iui-xs;
+      @include themed {
+        fill: t(iui-icons-color);
+      }
+    }
+  }
+
+  > .iui-input-bar {
+    margin-top: $iui-baseline;
+    text-align: right;
+
+    > .iui-button:not(:last-child) {
+      margin-right: $iui-s;
+    }
+  }
+}
+
+@mixin iui-permission-list {
+  width: 100%;
+  text-align: left;
+  list-style: none;
+  line-height: $iui-baseline * 3;
+  margin: $iui-line-height 0;
+  padding: $iui-baseline $iui-sm;
+  height: $iui-baseline * 24;
+  // overflow: scroll;
+  @include themed {
+    border-top: 1px solid t(iui-color-background-4);
+    border-bottom: 1px solid t(iui-color-background-4);
+  }
+
+  > li {
+    display: flex;
+    align-items: center;
+    user-select: all;
+
+    > span > a {
+      user-select: none;
+    }
+
+    > .iui-more-information {
+      margin-left: auto;
+      position: relative;
+
+      > .iui-tooltip {
+        margin-right: $iui-s;
+        @include iui-tooltip-hidden;
+      }
+
+      > svg {
+        width: $iui-icons-default;
+        height: $iui-icons-default;
+        @include themed {
+          fill: t(iui-icons-color);
+        }
+
+        &:hover + .iui-tooltip {
+          @include iui-tooltip-visible;
+        }
+      }
+    }
+  }
+}
