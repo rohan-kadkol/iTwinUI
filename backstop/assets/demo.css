@@ -43,6 +43,16 @@ hr {
   border-color: #2D373C;
 }
 
+/* Light high contrast theme */
+.iui-theme-light-hc body hr {
+  border-color: #cccccc;
+}
+
+/* Dark high contrast theme */
+.iui-theme-dark-hc body hr {
+  border-color: #696969;
+}
+
 /* Custom high contrast theme */
 html.custom-theme {
   --iui-color-foreground-body-rgb: 255, 0, 0;
