@@ -5,15 +5,19 @@
 
 @mixin iui-color-picker {
   @include iui-dropdown;
-  width: $iui-baseline * 27;
+  //max-width: ($iui-sm * 2) + ($iui-l * 10) + ($iui-s * 8);
   border-radius: $iui-border-radius;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding-left: $iui-sm;
-  padding-top: $iui-sm;
+  padding: $iui-baseline $iui-sm;
+  user-select: none;
+  // padding-left: $iui-sm;
+  // padding-top: $iui-sm;
 
   &.iui-advanced {
-    width: $iui-baseline * 24;
+    //width: $iui-baseline * 24;
+    flex-direction: column;
   }
 }
 
@@ -21,15 +25,13 @@
   @include iui-focus;
   height: $iui-l;
   width: $iui-l;
-  margin-right: $iui-sm;
-  margin-bottom: $iui-sm;
   cursor: pointer;
   border-radius: $iui-border-radius;
   background-color: var(--option-color);
-
   @include themed {
+    border: 1px solid t(iui-color-background-1);
     box-shadow: inset 0 0 0 $iui-xxs
-      rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-6));
+      rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-5));
   }
 
   &.iui-active {
@@ -47,26 +49,56 @@
 
   &.iui-add-color-button {
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: $iui-icons-default;
+      height: $iui-icons-default;
+      @include themed {
+        fill: t(iui-icons-color-actionable);
+      }
+    }
+
+    &:hover {
+      @include themed {
+        background-color: t(iui-color-background-1-overlay);
+        border-color: t(iui-color-background-1-overlay);
+      }
+
+      svg {
+        @include themed {
+          fill: t(iui-icons-color-actionable-hover);
+        }
+      }
+    }
   }
 }
 
 @mixin iui-color-palette {
-  width: auto;
   display: flex;
   flex-wrap: wrap;
+
+
+
+  gap: $iui-s;
+  max-width: ($iui-l * 10) + ($iui-xxs * 10) + ($iui-s * 8);
+  max-width: 332px; // Why is this the correct value??
+  // -width: (24 * 10) + (2 * 10) + (8 * 8) = 324px
+  // -width: (swatches per row) + (border) + (gap)  
 }
 
 @mixin iui-saved-colors {
-  margin-left: $iui-sm;
+  //margin-left: $iui-sm;
+  margin-top: $iui-baseline;
 }
 
 @mixin iui-color-selector {
-  padding-left: $iui-sm;
-  padding-top: $iui-sm;
   display: flex;
   flex-wrap: wrap;
+  width: 230px;
   height: $iui-baseline * 16;
-
 }
 
 @mixin iui-color-field {
@@ -74,7 +106,6 @@
   cursor: crosshair;
   width: $iui-baseline * 19;
   height: auto;
-
   @include themed {
     background-image: linear-gradient(0deg, rgb(0, 0, 0), transparent),
       linear-gradient(90deg, rgb(255, 255, 255), var(--color));
