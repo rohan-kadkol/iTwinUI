@@ -10,9 +10,6 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  @include themed {
-    background-color: t(iui-color-background-1);
-  }
 
   > .iui-header {
     display: flex;
@@ -23,11 +20,6 @@
     user-select: none;
     @media (prefers-reduced-motion: no-preference) {
       transition: background-color $iui-speed-fast ease-out;
-    }
-    @include themed {
-      border: 1px solid t(iui-color-background-3);
-      border-bottom-color: t(iui-color-background-4);
-      background-color: t(iui-color-background-3);
     }
 
     > .iui-icon,
@@ -90,27 +82,16 @@
   .iui-expandable-content {
     overflow: hidden;
     box-sizing: border-box;
-
-    @include themed {
-      border-bottom: 1px solid t(iui-color-background-4);
-      border-right: 1px solid t(iui-color-background-4);
-      border-left: 1px solid t(iui-color-background-4);
-    }
-
     @include iui-transition-group;
 
     // padding should be in a separate div because otherwise it messes up height transition
     > div {
-      padding: $iui-baseline $iui-sm;
+      padding: 0 $iui-sm;
     }
   }
 
   &:hover {
     > .iui-header {
-      @include themed {
-        background-color: t(iui-color-background-4);
-      }
-
       > .iui-icon {
         @include themed {
           fill: t(iui-icons-color-actionable-hover);
@@ -131,21 +112,61 @@
 
   &.iui-expanded {
     > .iui-header {
+      > .iui-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@mixin iui-expandable-block-filled {
+  @include themed {
+    background-color: t(iui-color-background-1);
+  }
+
+  > .iui-header {
+    @include themed {
+      border: 1px solid t(iui-color-background-3);
+      border-bottom-color: t(iui-color-background-4);
+      background-color: t(iui-color-background-3);
+    }
+  }
+
+  .iui-expandable-content {
+    @include themed {
+      border-bottom: 1px solid t(iui-color-background-4);
+      border-right: 1px solid t(iui-color-background-4);
+      border-left: 1px solid t(iui-color-background-4);
+    }
+  }
+
+  &:hover {
+    > .iui-header {
+      @include themed {
+        background-color: t(iui-color-background-4);
+      }
+    }
+  }
+
+  &.iui-expanded {
+    > .iui-header {
       @include themed {
         background-color: t(iui-color-background-3);
         border-left: 1px solid t(iui-color-background-4);
         border-top: 1px solid t(iui-color-background-4);
         border-right: 1px solid t(iui-color-background-4);
-
-        &:hover {
-          @include themed {
-            background-color: t(iui-color-background-4);
-          }
-        }
       }
 
-      > .iui-icon {
-        transform: rotate(90deg);
+      &:hover {
+        @include themed {
+          background-color: t(iui-color-background-4);
+        }
+      }
+    }
+
+    .iui-expandable-content {
+      > div {
+        padding: $iui-baseline $iui-sm;
       }
     }
   }

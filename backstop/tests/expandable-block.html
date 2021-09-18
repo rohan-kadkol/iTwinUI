@@ -23,8 +23,8 @@
       href="../assets/demo.css"
     />
     <style>
-      section {
-        max-width: 100%;
+      section[id^='demo'] {
+        width: 100%;
       }
     </style>
     <script
@@ -64,7 +64,11 @@
             aria-hidden="true"
           ></svg-chevron-right>
           <span class="iui-expandable-block-label">
-            <div class="iui-title">Expandable block title</div>
+            <div class="iui-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
           </span>
           <svg-status-success
             class="iui-status-icon iui-positive"
@@ -72,61 +76,15 @@
           ></svg-status-success>
         </div>
       </div>
-
-      <br />
-
-      <div class="iui-expandable-block iui-expanded">
-        <div
-          aria-expanded="true"
-          class="iui-header"
-          tabindex="0"
-        >
-          <svg-chevron-right
-            class="iui-icon"
-            aria-hidden="true"
-          ></svg-chevron-right>
-          <span class="iui-expandable-block-label">
-            <div class="iui-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-              qui officia deserunt mollit anim id est laborum.</div>
-          </span>
-        </div>
-        <div class="iui-expandable-content">
-          <div>
-            <expandable-content></expandable-content>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <hr />
+    <br />
 
-    <h2>Captions</h2>
+    <h3>With captions</h3>
     <section id="demo-captions">
       <div class="iui-expandable-block">
         <div
           aria-expanded="false"
-          class="iui-header"
-          tabindex="0"
-        >
-          <svg-chevron-right
-            class="iui-icon"
-            aria-hidden="true"
-          ></svg-chevron-right>
-          <span class="iui-expandable-block-label">
-            <div class="iui-title">Expandable block title</div>
-            <div class="iui-caption">Collapsed block caption</div>
-          </span>
-        </div>
-      </div>
-
-      <br />
-
-      <div class="iui-expandable-block iui-expanded">
-        <div
-          aria-expanded="true"
           class="iui-header"
           tabindex="0"
         >
@@ -152,13 +110,100 @@
             aria-hidden="true"
           ></svg-status-success>
         </div>
-        <div class="iui-expandable-content">
-          <div>
-            <expandable-content></expandable-content>
-          </div>
+      </div>
+    </section>
+
+    <br />
+
+    <h3>Borderless</h3>
+    <section id="demo-captions">
+      <div class="iui-expandable-block iui-borderless">
+        <div
+          aria-expanded="false"
+          class="iui-header"
+          tabindex="0"
+        >
+          <svg-chevron-right
+            class="iui-icon"
+            aria-hidden="true"
+          ></svg-chevron-right>
+          <span class="iui-expandable-block-label">
+            <div class="iui-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</div>
+          </span>
+          <svg-status-success
+            class="iui-status-icon iui-positive"
+            aria-hidden="true"
+          ></svg-status-success>
         </div>
       </div>
     </section>
+
+    <hr />
+
+    <h2>Native</h2>
+    <section id="demo-native">
+
+      <details class="iui-expandable-block">
+        <summary class="iui-header">
+          <svg-chevron-right
+            class="iui-icon"
+            aria-hidden="true"
+          ></svg-chevron-right>
+          <span class="iui-expandable-block-label">
+            <div class="iui-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</div>
+          </span>
+          <svg-status-success
+            class="iui-status-icon iui-positive"
+            aria-hidden="true"
+          ></svg-status-success>
+        </summary>
+      </details>
+
+    </section>
+
+    <br />
+
+    <h3>With captions</h3>
+    <section id="demo-native">
+
+      <details class="iui-expandable-block">
+        <summary class="iui-header">
+          <svg-chevron-right
+            class="iui-icon"
+            aria-hidden="true"
+          ></svg-chevron-right>
+          <span class="iui-expandable-block-label">
+            <div class="iui-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</div>
+            <div class="iui-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </span>
+          <svg-status-success
+            class="iui-status-icon iui-positive"
+            aria-hidden="true"
+          ></svg-status-success>
+        </summary>
+      </details>
+
+    </section>
+
 
     <script>
       document.querySelectorAll('.iui-header').forEach((el) => {

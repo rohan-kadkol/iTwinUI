@@ -4,4 +4,8 @@
 
 .iui-expandable-block {
   @include iui-expandable-block;
+
+  &:not(.iui-borderless) {
+    @include iui-expandable-block-filled;
+  }
 }
