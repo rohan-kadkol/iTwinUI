@@ -33,3 +33,11 @@
 .iui-progress-indicator-overlay {
   @include iui-progress-indicator-overlay;
 }
+
+.iui-progress-indicator-full-page {
+  @include iui-progress-indicator-full-page;
+}
+
+.iui-tips-carousel {
+  @include iui-tips-carousel;
+}
