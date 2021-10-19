@@ -46,7 +46,7 @@
 
   // Current step
   &.iui-current {
-    font-weight: $iui-font-weight-semibold;
+    font-weight: var(--iui-font-weight-semibold);
 
     .iui-wizard-step-name {
       @include themed {

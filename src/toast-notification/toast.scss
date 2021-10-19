@@ -48,7 +48,7 @@
     margin-right: $iui-l;
     margin-left: $iui-m;
     line-height: $iui-line-height;
-    font-weight: $iui-font-weight-normal;
+    font-weight: var(--iui-font-weight-normal);
     font-style: normal;
     @include themed {
       color: t(iui-text-color);

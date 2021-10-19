@@ -20,7 +20,7 @@ $iui-button-padding-large: $iui-xs * 6;
   outline: none;
   box-shadow: none;
   font-size: $iui-font-size;
-  font-weight: $iui-font-weight-normal;
+  font-weight: var(--iui-font-weight-normal);
   text-decoration: none;
   user-select: none;
   cursor: pointer;

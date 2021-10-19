@@ -7,7 +7,7 @@
   border-radius: $iui-border-radius;
   display: inline-block;
   font-size: $iui-font-size-small;
-  font-weight: $iui-font-weight-semibold;
+  font-weight: var(--iui-font-weight-semibold);
   font-family: $iui-monospace;
   line-height: 1;
   padding: round($iui-baseline * 0.33) $iui-s;

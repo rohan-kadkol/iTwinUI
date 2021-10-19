@@ -269,7 +269,7 @@
   &.iui-new {
     .iui-name,
     .iui-description {
-      font-weight: $iui-font-weight-semibold;
+      font-weight: var(--iui-font-weight-semibold);
     }
   }
 

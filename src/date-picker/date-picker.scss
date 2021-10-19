@@ -24,7 +24,7 @@
       border: none;
       padding: 0;
       position: relative;
-      font-weight: $iui-font-weight-bold;
+      font-weight: var(--iui-font-weight-bold);
       @include themed {
         background-color: t(iui-color-background-1);
       }
@@ -94,7 +94,7 @@
 
           &:hover:not(.iui-selected) {
             border-radius: $iui-border-radius;
-            font-weight: $iui-font-weight-semibold;
+            font-weight: var(--iui-font-weight-semibold);
             @include themed {
               color: t(iui-color-foreground-primary);
               background-color: rgba(
@@ -105,7 +105,7 @@
           }
 
           &.iui-today {
-            font-weight: $iui-font-weight-semibold;
+            font-weight: var(--iui-font-weight-semibold);
             border-radius: 50%;
             @include themed {
               background-color: rgba(
@@ -116,7 +116,7 @@
           }
 
           &.iui-selected {
-            font-weight: $iui-font-weight-semibold;
+            font-weight: var(--iui-font-weight-semibold);
             border-radius: $iui-border-radius;
             cursor: default;
             @include themed {

@@ -242,7 +242,7 @@
 
     // #region Statuses & states
     &.iui-new {
-      font-weight: $iui-font-weight-semibold;
+      font-weight: var(--iui-font-weight-semibold);
 
       > .iui-main-column::before {
         content: '•';

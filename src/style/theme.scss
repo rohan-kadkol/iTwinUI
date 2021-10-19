@@ -74,6 +74,12 @@ $iui-text-color-placeholder--light: rgba(
   $iui-opacity-5--light
 );
 
+// Light theme > Font weights
+$iui-font-weight-light--light: 300;
+$iui-font-weight-normal--light: 400;
+$iui-font-weight-semibold--light: 600;
+$iui-font-weight-bold--light: 700;
+
 // Light theme > Focus color
 $iui-focus-box-shadow--light: rgba(
   $iui-color-foreground-primary--light,
@@ -192,6 +198,12 @@ $iui-text-color-placeholder--dark: rgba(
   $iui-opacity-5--dark
 );
 
+// Dark theme > Font weights
+$iui-font-weight-light--dark: 300;
+$iui-font-weight-normal--dark: 400;
+$iui-font-weight-semibold--dark: 600;
+$iui-font-weight-bold--dark: 700;
+
 // Dark theme > Focus color
 $iui-focus-box-shadow--dark: rgba(
   $iui-color-foreground-primary--dark,
@@ -308,6 +320,12 @@ $iui-text-color-placeholder--light-hc: rgba(
   $iui-opacity-5--light-hc
 );
 
+// Light high contrast theme > Font weights
+$iui-font-weight-light--light-hc: 300;
+$iui-font-weight-normal--light-hc: 400;
+$iui-font-weight-semibold--light-hc: 600;
+$iui-font-weight-bold--light-hc: 700;
+
 // Light high contrast theme > Focus color
 $iui-focus-box-shadow--light-hc: rgba(
   $iui-color-foreground-primary--light-hc,
@@ -410,6 +428,12 @@ $iui-text-color-placeholder--dark-hc: rgba(
   $iui-opacity-5--dark-hc
 );
 
+// Dark high contrast theme > Font weights
+$iui-font-weight-light--dark-hc: 300;
+$iui-font-weight-normal--dark-hc: 400;
+$iui-font-weight-semibold--dark-hc: 600;
+$iui-font-weight-bold--dark-hc: 700;
+
 // Dark high contrast theme > Focus color
 $iui-focus-box-shadow--dark-hc: rgba(
   $iui-color-foreground-primary--dark-hc,
@@ -481,6 +505,10 @@ $themes: (
     iui-text-color: $iui-text-color--light,
     iui-text-color-muted: $iui-text-color-muted--light,
     iui-text-color-placeholder: $iui-text-color-placeholder--light,
+    iui-font-weight-light: $iui-font-weight-light--light,
+    iui-font-weight-normal: $iui-font-weight-normal--light,
+    iui-font-weight-semibold: $iui-font-weight-semibold--light,
+    iui-font-weight-bold: $iui-font-weight-bold--light,
     iui-focus-box-shadow: $iui-focus-box-shadow--light,
     iui-focus-positive-box-shadow: $iui-focus-positive-box-shadow--light,
     iui-focus-warning-box-shadow: $iui-focus-warning-box-shadow--light,
@@ -535,6 +563,10 @@ $themes: (
     iui-text-color: $iui-text-color--dark,
     iui-text-color-muted: $iui-text-color-muted--dark,
     iui-text-color-placeholder: $iui-text-color-placeholder--dark,
+    iui-font-weight-light: $iui-font-weight-light--dark,
+    iui-font-weight-normal: $iui-font-weight-normal--dark,
+    iui-font-weight-semibold: $iui-font-weight-semibold--dark,
+    iui-font-weight-bold: $iui-font-weight-bold--dark,
     iui-focus-box-shadow: $iui-focus-box-shadow--dark,
     iui-focus-positive-box-shadow: $iui-focus-positive-box-shadow--dark,
     iui-focus-warning-box-shadow: $iui-focus-warning-box-shadow--dark,
@@ -588,6 +620,10 @@ $themes: (
     iui-text-color: $iui-text-color--light-hc,
     iui-text-color-muted: $iui-text-color-muted--light-hc,
     iui-text-color-placeholder: $iui-text-color-placeholder--light-hc,
+    iui-font-weight-light: $iui-font-weight-light--light-hc,
+    iui-font-weight-normal: $iui-font-weight-normal--light-hc,
+    iui-font-weight-semibold: $iui-font-weight-semibold--light-hc,
+    iui-font-weight-bold: $iui-font-weight-bold--light-hc,
     iui-focus-box-shadow: $iui-focus-box-shadow--light-hc,
     iui-icons-color: $iui-icons-color--light-hc,
     iui-icons-color-actionable: $iui-icons-color-actionable--light-hc,
@@ -639,6 +675,10 @@ $themes: (
     iui-text-color: $iui-text-color--dark-hc,
     iui-text-color-muted: $iui-text-color-muted--dark-hc,
     iui-text-color-placeholder: $iui-text-color-placeholder--dark-hc,
+    iui-font-weight-light: $iui-font-weight-light--dark-hc,
+    iui-font-weight-normal: $iui-font-weight-normal--dark-hc,
+    iui-font-weight-semibold: $iui-font-weight-semibold--dark-hc,
+    iui-font-weight-bold: $iui-font-weight-bold--dark-hc,
     iui-focus-box-shadow: $iui-focus-box-shadow--dark-hc,
     iui-icons-color: $iui-icons-color--dark-hc,
     iui-icons-color-actionable: $iui-icons-color-actionable--dark-hc,

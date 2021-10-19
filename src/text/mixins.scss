@@ -20,12 +20,12 @@
   );
 
   $weights: (
-    headline: $iui-font-weight-light,
-    title: $iui-font-weight-light,
-    subheading: $iui-font-weight-normal,
-    leading: $iui-font-weight-normal,
-    body: $iui-font-weight-normal,
-    small: $iui-font-weight-normal,
+    headline: var(--iui-font-weight-light),
+    title: var(--iui-font-weight-light),
+    subheading: var(--iui-font-weight-normal),
+    leading: var(--iui-font-weight-normal),
+    body: var(--iui-font-weight-normal),
+    small: var(--iui-font-weight-normal),
   );
   $line-heights: (
     headline: 2 * $iui-line-height,

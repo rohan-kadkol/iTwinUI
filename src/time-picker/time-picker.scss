@@ -57,7 +57,7 @@
       }
 
       &.iui-selected {
-        font-weight: $iui-font-weight-semibold;
+        font-weight: var(--iui-font-weight-semibold);
         cursor: default;
         @include themed {
           background-color: t(iui-color-background-primary);

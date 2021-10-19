@@ -25,5 +25,5 @@ $iui-badge-text-color: rgba($iui-color-foreground-body--light, $iui-opacity-3--l
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: $iui-font-weight-semibold;
+  font-weight: var(--iui-font-weight-semibold);
 }

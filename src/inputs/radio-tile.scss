@@ -70,7 +70,7 @@
 
       > .iui-label {
         font-size: $iui-font-size;
-        font-weight: $iui-font-weight-semibold;
+        font-weight: var(--iui-font-weight-semibold);
         line-height: $iui-line-height;
         text-align: center;
 
