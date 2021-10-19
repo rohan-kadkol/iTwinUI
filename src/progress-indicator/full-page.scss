@@ -22,6 +22,43 @@
   .iui-loading-imodel {
     width: $iui-3xl * 2;
     margin-bottom: $iui-baseline * 2;
+    $size: 24px;
+    $time: 1;
+
+    .iui-loading-imodel-shape {
+      fill: var(--iui-color-background-positive);
+      animation: blink $time + s infinite ease-out;
+
+      @for $i from 1 through 18 {
+        &.outer-#{$i} {
+          animation-delay: -($time / 18) * $i + s;
+        }
+      }
+
+      @for $i from 1 through 6 {
+        &.inner-#{$i} {
+          animation-delay: -($time / 6) * $i + s;
+        }
+      }
+    }
+
+    .iui-loading-imodel-i {
+      fill: var(--iui-color-foreground-accessory);
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0.25;
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.25;
+      }
+    }
 
     // &-shape {
     //   @include themed {
