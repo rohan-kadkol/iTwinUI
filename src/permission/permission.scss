@@ -9,9 +9,9 @@
   @include iui-reset;
   @include iui-font-family;
   position: absolute;
-  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 33%;
+  transform: translate(-50%, -33%);
   padding: $iui-line-height $iui-3xl;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,8 @@
   @media screen and (max-width: 512px) {
     min-width: 100vw;
     border-radius: 0;
+    padding-left: $iui-xl;
+    padding-right: $iui-xl;
   }
 
   > .iui-user-exchange {
@@ -53,7 +55,7 @@
     user-select: all;
   }
 
-  > ul {
+  > .iui-scope-list {
     @include iui-permission-list;
   }
 
@@ -79,7 +81,7 @@
 
   > .iui-input-bar {
     margin-top: $iui-baseline;
-    text-align: right;
+    display: flex;
 
     > .iui-button:not(:last-child) {
       margin-right: $iui-s;
@@ -95,10 +97,16 @@
   margin: $iui-line-height 0;
   padding: $iui-baseline $iui-sm;
   height: $iui-baseline * 24;
-  // overflow: scroll;
+  overflow: hidden;
   @include themed {
     border-top: 1px solid t(iui-color-background-4);
     border-bottom: 1px solid t(iui-color-background-4);
+  }
+
+  &-expanded {
+    overflow-y: scroll;
+    overflow-y: overlay;
+    @include iui-scroll-snapping('li');
   }
 
   > li {
@@ -120,11 +128,7 @@
       }
 
       > svg {
-        width: $iui-icons-default;
-        height: $iui-icons-default;
-        @include themed {
-          fill: t(iui-icons-color);
-        }
+        @include iui-icons-default;
 
         &:hover + .iui-tooltip {
           @include iui-tooltip-visible;
