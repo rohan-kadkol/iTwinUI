@@ -10,10 +10,11 @@
   flex-direction: column;
   align-items: flex-end;
 
-  > .iui-input-container:not(.iui-inline) {
+  > .iui-input-container:not(.iui-inline-label) {
     width: 100%;
   }
 
+  > .iui-input-container,
   > .iui-input {
     margin-bottom: $iui-baseline;
   }

@@ -1,7 +1,6 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import '../style/index';
-@import '../inputs/variables';
 @import './button';
 
 @mixin iui-button-borderless {
@@ -20,18 +19,15 @@
 
   // If icon is by itself, button takes 1:1 size ratio
   > .iui-icon:only-child {
-    margin-left: $iui-input-offset;
-    margin-right: $iui-input-offset;
+    margin-left: $iui-component-offset;
+    margin-right: $iui-component-offset;
   }
 
   &:enabled:hover,
   &:enabled:active,
   &:focus-visible {
     @include themed {
-      background-color: rgba(
-        t(iui-color-foreground-body-rgb),
-        t(iui-opacity-6)
-      );
+      background-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-6));
       border-color: transparent;
     }
   }
@@ -42,10 +38,7 @@
     &:enabled:active {
       background: transparent;
       @include themed {
-        background-color: rgba(
-          t(iui-color-foreground-primary-rgb),
-          t(iui-opacity-6)
-        );
+        background-color: rgba(t(iui-color-foreground-primary-rgb), t(iui-opacity-6));
       }
       border-color: transparent;
     }

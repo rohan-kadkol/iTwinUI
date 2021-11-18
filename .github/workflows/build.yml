@@ -16,29 +16,106 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Use Node 12.X
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2
         with:
           node-version: 12.x
+          cache: yarn
 
       - run: yarn install --frozen-lockfile
-      - run: yarn audit
+      - run: yarn audit-ci --allowlist 1002373
+
       - run: yarn lint
       - run: yarn lint:copyright ${{ github.workspace }}/*/**.{scss,html,js,ts}
       - run: yarn build
       - run: yarn test:ci
 
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: 'backstop/results/**/*.xml'
-          comment_on_pr: false
-          check_name: 'Test results'
-          fail_on: 'nothing'
-
       - name: Publish test results artifact
-        if: always()
+        if: failure()
         uses: actions/upload-artifact@v2.2.3
         with:
           name: 'backstop_test_results'
           path: '${{ github.workspace }}/backstop/results/'
+
+      - name: Host test results on gh pages
+        continue-on-error: true
+        if: github.ref != 'refs/heads/main' && failure()
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: ${{ github.workspace }}/backstop/results
+          target-folder: ${{ github.event.number }}
+          single-commit: true
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
+
+      - name: Post gh pages link under Checks
+        if: failure()
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ github.event.pull_request.head.sha }}',
+              state: '${{ job.status }}',
+              context: 'Test results',
+              description: 'Backstop html report',
+              target_url: 'https://itwin.github.io/iTwinUI/${{ github.event.number }}/html_report/'
+            })
+
+  deploy:
+    name: Deploy demo html pages
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node 12.X
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+
+      - name: List open pull requests
+        id: open_prs
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            return ((await github.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open'
+            })).data.map(pr => pr.number).join('\n'))
+
+      - name: Host backstop folder on gh pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          single-commit: true
+          folder: ${{ github.workspace }}/backstop/
+          target-folder: backstop
+          clean-exclude: |
+            index.html
+            *.ts
+            *.js
+            tests
+            scenarios
+            results
+            engine_scripts
+            ${{ steps.open_prs.outputs.result }}
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
+
+      - name: Host css on gh pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: ${{ github.workspace }}/lib/css
+          target-folder: lib/css
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com

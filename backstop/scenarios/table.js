@@ -1,19 +1,29 @@
-const { scenario } = require('../scenarioHelper');
+const { hover, focus, scenario } = require('../scenarioHelper');
 
 module.exports = [
-  scenario('default', {
+  // Table types
+  scenario('Type Default', {
     selectors: ['#demo-default'],
   }),
-  scenario('zebra-striping', {
-    selectors: ['#demo-zebra-striping'],
+  scenario('Type Extras', {
+    selectors: ['#demo-extras'],
   }),
-  scenario('sticky', {
-    selectors: ['#demo-sticky'],
+  scenario('Type Expandable Rows', {
+    selectors: ['#demo-expandable-rows'],
   }),
-  scenario('loading', {
+  scenario('Type Loading', {
     selectors: ['#demo-loading'],
   }),
-  scenario('empty-state', {
+  scenario('Type Empty', {
     selectors: ['#demo-empty-state'],
+  }),
+
+  // Editable cell
+  scenario('Editable cell', {
+    actions: [
+      focus('#demo-default .iui-row:nth-child(1) .iui-cell[contenteditable]'),
+      hover('#demo-default .iui-row:nth-child(2) .iui-cell[contenteditable]'),
+    ],
+    selectors: ['#demo-default .iui-table:nth-child(1)'],
   }),
 ];

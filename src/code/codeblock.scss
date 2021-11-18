@@ -5,7 +5,6 @@
 
 @mixin iui-codeblock {
   @include iui-reset;
-  @include iui-font-family;
   margin: round($iui-baseline/2) 0;
 
   > .iui-title-bar {
@@ -32,7 +31,6 @@
     overflow-x: auto;
     overflow-y: auto;
     border-radius: 0 0 $iui-border-radius $iui-border-radius;
-    font-family: $iui-monospace;
     white-space: normal;
 
     @include iui-focus;
@@ -47,7 +45,7 @@
       white-space: nowrap;
       hyphens: auto;
       counter-increment: section;
-
+      font-family: $iui-monospace;
       @include themed {
         background-color: t(iui-color-background-1);
       }

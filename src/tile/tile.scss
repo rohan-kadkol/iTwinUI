@@ -6,7 +6,6 @@
 
 @mixin iui-tile {
   @include iui-reset;
-  @include iui-font-family;
   display: inline-flex;
   flex-direction: column;
   width: $iui-3xl * 3;
@@ -38,7 +37,7 @@
       @include iui-button-borderless;
       position: absolute;
       border-radius: 50%;
-      top: round($iui-baseline / 2);
+      top: round($iui-baseline * 0.5);
     }
 
     > .iui-type-indicator {
@@ -51,7 +50,7 @@
 
     > .iui-badge-container {
       position: absolute;
-      bottom: round($iui-baseline / 2);
+      bottom: round($iui-baseline * 0.5);
       width: calc(100% - 2 * #{$iui-sm});
       height: auto;
       right: $iui-sm;
@@ -64,25 +63,22 @@
       }
     }
 
-    > svg {
+    .iui-thumbnail-icon {
       @include iui-icons-3xl;
     }
 
-    > .iui-play-icon {
+    > .iui-picture ~ .iui-thumbnail-icon {
       z-index: 1;
       cursor: pointer;
-
-      &,
-      > path {
+      @media (prefers-reduced-motion: no-preference) {
         transition: fill $iui-speed-fast ease;
-        @include themed() {
-          fill: rgba(t(iui-color-foreground-accessory-rgb), t(iui-opacity-3));
-          filter: drop-shadow(0 2px 1px rgba(0, 1, 5, t(iui-opacity-5)));
-        }
+      }
+      @include themed() {
+        fill: rgba(t(iui-color-foreground-accessory-rgb), t(iui-opacity-3));
+        filter: drop-shadow(0 2px 1px rgba(0, 1, 5, t(iui-opacity-5)));
       }
 
-      &:hover,
-      &:hover > path {
+      &:hover {
         @include themed() {
           fill: rgba(t(iui-color-foreground-accessory-rgb), t(iui-opacity-2));
         }
@@ -92,7 +88,9 @@
     > .iui-picture {
       width: 100%;
       height: 100%;
-      transition: transform $iui-speed ease;
+      @media (prefers-reduced-motion: no-preference) {
+        transition: transform $iui-speed ease;
+      }
       position: absolute;
       top: 0;
       left: 0;
@@ -124,7 +122,7 @@
           background-color: rgba(0, 0, 0, t(iui-opacity-4));
         }
 
-        > svg {
+        > .iui-icon {
           @include themed() {
             fill: t(iui-color-foreground-accessory);
           }
@@ -147,13 +145,13 @@
       align-items: center;
       font-size: $iui-font-size-leading;
       user-select: all;
-      margin-bottom: $iui-baseline / 2;
+      margin-bottom: $iui-baseline * 0.5;
 
       @include themed() {
         color: t(iui-text-color);
       }
 
-      > svg {
+      .iui-tile-status-icon {
         @include iui-icons-default;
         margin-right: $iui-s;
         flex-shrink: 0;
@@ -193,13 +191,14 @@
         color: t(iui-text-color-muted);
       }
 
-      > svg {
+      > svg,
+      .iui-metadata-icon {
         @include iui-icons-default;
         margin-right: $iui-s;
         flex-shrink: 0;
       }
 
-      > *:not(svg) {
+      > * {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -208,7 +207,7 @@
 
     > .iui-more-options {
       position: absolute;
-      bottom: $iui-baseline / 2;
+      bottom: $iui-baseline * 0.5;
       right: $iui-s;
       visibility: hidden;
 
@@ -225,7 +224,6 @@
     white-space: nowrap;
 
     > .iui-button {
-      @include iui-font-family;
       font-size: $iui-font-size;
       flex: 1;
       height: auto;

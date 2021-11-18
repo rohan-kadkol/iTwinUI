@@ -4,6 +4,7 @@
 
 @mixin iui-button-group {
   display: inline-flex;
+  align-items: center;
 
   > .iui-button {
     &:not(.iui-borderless) {
@@ -20,7 +21,7 @@
       border-bottom-right-radius: $iui-border-radius;
     }
 
-    &:not(:last-of-type) {
+    &:not(.iui-borderless):not(.iui-cta):not(.iui-high-visibility):not(:last-of-type) {
       border-right: none;
     }
 
@@ -29,10 +30,7 @@
       &:enabled {
         + :disabled {
           @include themed {
-            border-left-color: rgba(
-              t(iui-color-foreground-body-rgb),
-              t(iui-opacity-4)
-            );
+            border-left-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-4));
           }
         }
 
@@ -40,10 +38,7 @@
         &:active + .iui-button,
         &:focus-visible + .iui-button {
           @include themed {
-            border-left-color: rgba(
-              t(iui-color-foreground-body-rgb),
-              t(iui-opacity-1)
-            );
+            border-left-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-1));
           }
         }
       }
@@ -75,10 +70,7 @@
     &:disabled {
       &::after {
         @include themed {
-          background-color: rgba(
-            t(iui-color-foreground-body-rgb),
-            t(iui-opacity-5)
-          );
+          background-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-5));
         }
       }
     }

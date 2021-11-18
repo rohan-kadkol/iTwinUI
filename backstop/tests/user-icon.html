@@ -3,30 +3,52 @@
   See LICENSE.md in the project root for license terms and full copyright notice.
 -->
 <!DOCTYPE html>
-<html id="theme">
+<html
+  lang="en-US"
+  id="theme"
+>
   <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
     <title>User icon | iTwinUI</title>
     <link
-      rel="icon"
-      href="../assets/favicon.ico"
-    />
-    <link
       rel="stylesheet"
-      href="../../lib/css/global.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../lib/css/user-icon.css"
+      href="../../lib/css/all.css"
     />
     <link
       rel="stylesheet"
       href="../assets/demo.css"
     />
+    <script
+      type="module"
+      src="https://cdn.skypack.dev/@itwin/itwinui-icons-elements/user"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.skypack.dev/@itwin/itwinui-icons-elements/checkmark"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.skypack.dev/@itwin/itwinui-icons-elements/away"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.skypack.dev/@itwin/itwinui-icons-elements/close-small"
+    ></script>
     <script src="../assets/theme.js"></script>
     <style>
       #demo-default > span,
       #demo-status > div > span {
         margin-right: 4px;
+      }
+
+      .demo-right {
+        top: -5px;
+        left: 100%;
+        margin-left: 5px;
       }
     </style>
   </head>
@@ -35,8 +57,23 @@
     <h1>User icon</h1>
     <hr />
 
+    <h2>Default</h2>
     <section id="demo-default">
-      <h2 id="default">Default</h2>
+
+      <span
+        class="iui-user-icon iui-small"
+        title="User"
+      >
+        <abbr
+          class="iui-initials"
+          style="background-color: #FFC335;"
+        ></abbr>
+        <svg-user
+          class="iui-icon"
+          aria-hidden="true"
+        ></svg-user>
+        <span class="iui-stroke"></span>
+      </span>
 
       <span
         class="iui-user-icon iui-small"
@@ -65,6 +102,21 @@
           src="https://itwinplatformcdn.azureedge.net/iTwinUI/user-placeholder.png"
           alt="Terry Rivers"
         />
+        <span class="iui-stroke"></span>
+      </span>
+
+      <span
+        class="iui-user-icon"
+        title="User"
+      >
+        <abbr
+          class="iui-initials"
+          style="background-color: #F7963E;"
+        ></abbr>
+        <svg-user
+          class="iui-icon"
+          aria-hidden="true"
+        ></svg-user>
         <span class="iui-stroke"></span>
       </span>
 
@@ -100,6 +152,21 @@
 
       <span
         class="iui-user-icon iui-large"
+        title="User"
+      >
+        <abbr
+          class="iui-initials"
+          style="background-color: #73C7C1;"
+        ></abbr>
+        <svg-user
+          class="iui-icon"
+          aria-hidden="true"
+        ></svg-user>
+        <span class="iui-stroke"></span>
+      </span>
+
+      <span
+        class="iui-user-icon iui-large"
         title="Terry Rivers"
       >
         <abbr
@@ -125,6 +192,21 @@
           src="https://itwinplatformcdn.azureedge.net/iTwinUI/user-placeholder.png"
           alt="Terry Rivers"
         />
+        <span class="iui-stroke"></span>
+      </span>
+
+      <span
+        class="iui-user-icon iui-x-large"
+        title="User"
+      >
+        <abbr
+          class="iui-initials"
+          style="background-color: #85A9CF;"
+        ></abbr>
+        <svg-user
+          class="iui-icon"
+          aria-hidden="true"
+        ></svg-user>
         <span class="iui-stroke"></span>
       </span>
 
@@ -159,10 +241,9 @@
       </span>
     </section>
 
-    <hr />
-
+    <br />
+    <h3>With online status</h3>
     <section id="demo-status">
-      <h2 id="status">Status</h2>
 
       <div id="online">
         <span
@@ -180,14 +261,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use checkmark.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
 
@@ -210,14 +287,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use checkmark.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
 
@@ -236,14 +309,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use checkmark.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
 
@@ -266,14 +335,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use checkmark.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
 
@@ -292,14 +357,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use checkmark.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
 
@@ -322,14 +383,10 @@
             title="Online"
             class="iui-status iui-online"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-checkmark
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" />
-            </svg>
+            ></svg-checkmark>
           </span>
         </span>
       </div>
@@ -350,14 +407,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
 
@@ -380,14 +433,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
 
@@ -406,14 +455,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
 
@@ -436,14 +481,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
 
@@ -462,14 +503,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
 
@@ -492,14 +529,10 @@
             title="Away"
             class="iui-status iui-away"
           >
-            <!-- Use away.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-away
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path d="m13.445 12.832-6.445-4.297v-7.535h2v6.465l5.555 3.703z" />
-            </svg>
+            ></svg-away>
           </span>
         </span>
       </div>
@@ -639,15 +672,10 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
         </span>
 
@@ -670,15 +698,10 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
         </span>
 
@@ -697,15 +720,10 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
         </span>
 
@@ -728,15 +746,10 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
         </span>
 
@@ -755,15 +768,10 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
         </span>
 
@@ -786,18 +794,809 @@
             title="Offline"
             class="iui-status"
           >
-            <!-- Use close-small.svg from @itwin/itwinui-icons package. -->
-            <svg
+            <svg-close-small
               class="iui-status-symbol"
               aria-hidden="true"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" />
-            </svg>
+            ></svg-close-small>
           </span>
+        </span>
+
+    </section>
+
+    <hr />
+
+    <h2>User list</h2>
+    <section id="demo-list">
+
+      <!-- Small -->
+      <div class="iui-user-icon-list">
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count iui-small">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <div class="iui-tooltip-container">
+          <span class="iui-tooltip demo-right">Terry Rivers<br />Robin Mercer<br />Terry Rivers<br />Robin
+            Mercer<br />Terry
+            Rivers</span>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- Default -->
+      <div class="iui-user-icon-list">
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <div class="iui-tooltip-container">
+          <span class="iui-tooltip demo-right">Terry Rivers<br />Robin Mercer<br />Terry Rivers<br />Robin
+            Mercer<br />Terry
+            Rivers</span>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- Large -->
+      <div class="iui-user-icon-list">
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count iui-large">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <div class="iui-tooltip-container">
+          <span class="iui-tooltip demo-right">Terry Rivers<br />Robin Mercer<br />Terry Rivers<br />Robin
+            Mercer<br />Terry
+            Rivers</span>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- X-large -->
+      <div class="iui-user-icon-list">
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count iui-x-large">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <div class="iui-tooltip-container">
+          <span class="iui-tooltip demo-right">Terry Rivers<br />Robin Mercer<br />Terry Rivers<br />Robin
+            Mercer<br />Terry
+            Rivers</span>
+        </div>
+      </div>
+
+    </section>
+
+    <br />
+
+    <h3>User List Stacked</h3>
+    <section id="demo-stacked">
+
+      <!-- Small -->
+      <div class="iui-user-icon-list iui-stacked">
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count iui-small">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
         </span>
       </div>
+
+      <br />
+
+      <!-- Default -->
+      <div class="iui-user-icon-list iui-stacked">
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count ">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+
+      <br />
+
+      <!-- Large -->
+      <div class="iui-user-icon-list iui-stacked">
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+        <span class="iui-user-icon iui-user-icon-count iui-large">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+
+      <br />
+
+      <!-- X-large -->
+      <div class="iui-user-icon-list iui-stacked">
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span class="iui-user-icon iui-user-icon-count iui-x-large">
+          <abbr class="iui-initials">
+            5
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <div class="iui-tooltip-container">
+          <span class="iui-tooltip demo-right">Terry Rivers<br />Robin Mercer<br />Terry Rivers<br />Robin
+            Mercer<br />Terry
+            Rivers</span>
+        </div>
+
+      </div>
     </section>
+
+    <h3>Animated on hover</h3>
+    <section id="demo-animated">
+
+      <!-- Small -->
+      <div class="iui-user-icon-list iui-stacked iui-animated">
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-small"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+
+      <br />
+
+      <!-- Default -->
+      <div class="iui-user-icon-list iui-stacked iui-animated">
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+
+      <br />
+
+      <!-- Large -->
+      <div
+        class="iui-user-icon-list iui-stacked iui-animated"
+        id="demo-animated-1"
+      >
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+          id="test-animated-1"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+      </div>
+
+      <br />
+
+      <!-- X-large -->
+      <div class="iui-user-icon-list iui-stacked iui-animated">
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #6AB9EC;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #B1C854;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Terry Rivers"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #F7706C;"
+          >
+            TR
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+        <span
+          class="iui-user-icon iui-x-large"
+          title="Robin Mercer"
+        >
+          <abbr
+            class="iui-initials"
+            style="background-color: #4585A5;"
+          >
+            RM
+          </abbr>
+          <span class="iui-stroke"></span>
+        </span>
+
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll('#demo-list .iui-user-icon-list').forEach((list) => {
+        const lastIcon = list.querySelector('.iui-user-icon:nth-last-child(2)');
+        const tooltip = list.querySelector('.iui-tooltip');
+        tooltip.style.visibility = 'visible';
+        lastIcon.addEventListener('mouseenter', () => { tooltip.style.opacity = 1; });
+        lastIcon.addEventListener('mouseleave', () => { tooltip.style.opacity = 0; });
+      });
+    </script>
   </body>
 </html>

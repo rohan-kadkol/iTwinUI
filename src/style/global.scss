@@ -4,15 +4,19 @@
 
 .iui-body {
   @include themed {
-    background-color: t(iui-color-background-1);
+    background-color: t(iui-color-background-2);
     color: t(iui-text-color);
   }
 
   font-size: $iui-font-size;
   line-height: $iui-line-height;
 
-  @include iui-font-family;
   @include iui-scrollbar;
+  @include iui-font-family;
+
+  &.iui-no-webfonts {
+    font-family: $iui-sans-fallback;
+  }
 }
 
 .iui-anchor {
@@ -24,10 +28,7 @@
   // Text highlight
   ::selection {
     @include themed {
-      background-color: rgba(
-        t(iui-color-foreground-primary-rgb),
-        t(iui-opacity-4)
-      );
+      background-color: rgba(t(iui-color-foreground-primary-rgb), t(iui-opacity-4));
     }
   }
 
