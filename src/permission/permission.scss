@@ -36,7 +36,7 @@
     padding-right: $iui-xl;
   }
 
-  > .iui-user-exchange {
+  &-user-exchange {
     display: flex;
     align-items: center;
     margin-bottom: $iui-line-height;
@@ -51,15 +51,26 @@
     }
   }
 
-  > p > strong {
-    user-select: all;
+  &-title {
+    @include iui-reset;
+    @include iui-font-family;
+    font-weight: $iui-font-weight-normal;
+    margin-bottom: $iui-baseline;
   }
 
-  > .iui-scope-list {
-    @include iui-permission-list;
+  &-description {
+    margin: 0;
+
+    > strong {
+      user-select: all;
+    }
   }
 
-  > .iui-tos {
+  &-scope-list {
+    @include iui-scope-list;
+  }
+
+  &-tos {
     font-size: $iui-font-size-small;
     @include themed {
       color: t(iui-text-color-muted);
@@ -70,16 +81,12 @@
     }
 
     > .iui-icon {
-      width: $iui-icons-small;
-      height: $iui-icons-small;
+      @include iui-icons-small;
       margin-right: $iui-xs;
-      @include themed {
-        fill: t(iui-icons-color);
-      }
     }
   }
 
-  > .iui-input-bar {
+  &-input-bar {
     margin-top: $iui-baseline;
     display: flex;
 
@@ -89,7 +96,8 @@
   }
 }
 
-@mixin iui-permission-list {
+@mixin iui-scope-list {
+  @include iui-reset;
   width: 100%;
   text-align: left;
   list-style: none;
@@ -127,12 +135,12 @@
         @include iui-tooltip-hidden;
       }
 
-      > svg {
+      svg {
         @include iui-icons-default;
+      }
 
-        &:hover + .iui-tooltip {
-          @include iui-tooltip-visible;
-        }
+      .iui-tooltip-container:hover + .iui-tooltip {
+        @include iui-tooltip-visible;
       }
     }
   }
