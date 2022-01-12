@@ -22,16 +22,35 @@
 .iui-anchor {
   @include iui-anchor;
 
-  &.iui-anchor-popout::after {
-    content: '';
-    width: $iui-icons-small;
-    height: $iui-icons-small;
-    margin-left: $iui-xs;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m16 0v5.4l-1.9-2-8.4 8.4-1.5-1.5 8.3-8.4-1.9-1.9m5.4 16v-9h-1v8h-14v-14h8v-1h-9v16z'/%3E%3C/svg%3E");
+  &.iui-anchor-popout {
+    &::after {
+      content: '';
+      display: inline-block;
+      width: $iui-icons-small;
+      height: $iui-icons-small;
+      margin-left: $iui-xs;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @supports (
+        -webkit-mask-image: url('https://unpkg.com/@itwin/itwinui-icons/icons/window-popout.svg') or (mask-image:
+        url('https://unpkg.com/@itwin/itwinui-icons/icons/window-popout.svg'))
+      ) {
+        mask-image: url('https://unpkg.com/@itwin/itwinui-icons/icons/window-popout.svg');
+        mask-image: url('https://unpkg.com/@itwin/itwinui-icons/icons/window-popout.svg');
+        @include themed {
+          background-color: t(iui-color-foreground-primary);
+        }
+      }
+      // background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='currentColor' d='m16 0v5.4l-1.9-2-8.4 8.4-1.5-1.5 8.3-8.4-1.9-1.9m5.4 16v-9h-1v8h-14v-14h8v-1h-9v16z'/%3E%3C/svg%3E");
+    }
+
+    &:hover::after {
+      @include themed {
+        background-color: t(iui-color-foreground-primary-overlay);
+      }
+    }
   }
 }
 
