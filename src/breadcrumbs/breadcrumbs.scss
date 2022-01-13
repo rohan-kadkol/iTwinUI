@@ -3,6 +3,7 @@
 @import '../style/index';
 @import '../icon/index';
 @import '../button/borderless';
+@import '../anchor/index';
 
 @mixin iui-breadcrumbs {
   @include iui-reset;

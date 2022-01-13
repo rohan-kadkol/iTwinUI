@@ -2,24 +2,6 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './color';
 
-@mixin no-link {
-  text-decoration: none;
-
-  @include themed {
-    color: t(iui-text-color);
-  }
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    @include themed {
-      color: t(iui-text-color);
-    }
-    text-decoration: none;
-  }
-}
-
 @mixin focus-visible {
   &:focus-visible {
     @content;
@@ -44,23 +26,6 @@
   padding: 0;
   border: none;
   vertical-align: baseline;
-}
-
-@mixin iui-anchor {
-  @include iui-focus($offset: 2px);
-  border-radius: $iui-border-radius;
-  text-decoration: none;
-  cursor: pointer;
-  @include themed {
-    color: t(iui-color-foreground-primary);
-  }
-
-  &:hover {
-    @include themed {
-      color: t(iui-color-foreground-primary-overlay);
-    }
-    text-decoration: underline;
-  }
 }
 
 @mixin iui-scrollbar {
