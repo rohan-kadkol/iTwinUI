@@ -5,7 +5,24 @@
 @mixin iui-radio {
   @include iui-inputs-checkbox-radio;
 
-  .iui-radio-dot {
-    border-radius: 50%;
+  input[type='radio'] {
+    &,
+    &::after {
+      border-radius: 50%;
+    }
+
+    // Option 1 using SVG mask
+    // &:checked::after {
+    //   mask-image: url('../../backstop/assets/radio-dot.svg');
+    // }
+
+    // Option 2 not using SVG mask
+    &::after {
+      width: 50%;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
