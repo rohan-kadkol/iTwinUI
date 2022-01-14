@@ -4,79 +4,54 @@
 @import '../icon/index';
 
 @mixin iui-checkbox {
-  @include iui-inputs-checkbox-radio;
+  @include iui-checkbox-radio;
+  border-radius: $iui-border-radius;
 
-  input[type='checkbox'] {
-    border-radius: $iui-border-radius;
-
-    &:checked::after {
-      mask-image: url('../../backstop/assets/checkbox-check.svg');
-    }
-
-    &:indeterminate::after {
-      mask-image: url('../../backstop/assets/checkbox-indeterminate.svg');
-    }
+  &:checked::after {
+    mask-image: url('../../backstop/assets/checkbox-check.svg');
   }
 
-  &-loading {
-    &,
-    .iui-label {
-      cursor: wait;
-      @include themed {
-        color: t(iui-text-color-muted);
-      }
-    }
-
-    input[type='checkbox']:disabled {
-      border-color: transparent;
-      background-color: transparent;
-      cursor: wait;
-    }
-
-    .iui-progress-indicator-radial {
-      position: absolute;
-      width: $input-size;
-      height: $input-size;
-    }
-
-    .iui-label ~ .iui-progress-indicator-radial {
-      right: 0;
-    }
+  &:indeterminate::after {
+    mask-image: url('../../backstop/assets/checkbox-indeterminate.svg');
   }
 
   &-visibility {
-    > input[type='checkbox'] {
-      border: none;
+    &,
+    &:enabled,
+    &:checked:enabled,
+    &:indeterminate:enabled,
+    &:hover {
+      border-color: transparent;
       background-color: transparent;
       @include iui-focus($thickness: 1px, $offset: 1px);
+    }
 
-      &::after {
-        mask-image: url('../../backstop/assets/checkbox-visibility-uncheck.svg');
-        @include themed {
-          background-color: t(iui-icons-color-actionable-disabled);
-        }
+    &::after {
+      mask-image: url('../../backstop/assets/checkbox-visibility-uncheck.svg');
+      @include themed {
+        background-color: t(iui-icons-color-actionable-disabled);
       }
+    }
 
-      &:enabled::after {
-        @include themed {
-          background-color: t(iui-icons-color-actionable);
-        }
+    &:enabled::after {
+      @include themed {
+        background-color: t(iui-icons-color-actionable);
       }
+    }
 
-      &:checked::after,
-      &:indeterminate::after {
-        @include themed {
-          background-color: t(iui-color-foreground-primary);
-        }
+    &:checked::after,
+    &:indeterminate::after {
+      @include themed {
+        background-color: t(iui-color-foreground-primary);
       }
+    }
 
-      &:checked::after {
-        mask-image: url('../../backstop/assets/checkbox-visibility-check.svg');
-      }
+    &:checked::after {
+      mask-image: url('../../backstop/assets/checkbox-visibility-check.svg');
+    }
 
-      &:indeterminate::after {
-        mask-image: url('../../backstop/assets/checkbox-visibility-indeterminate.svg');
-      }
+    &:indeterminate::after {
+      mask-image: url('../../backstop/assets/checkbox-visibility-indeterminate.svg');
     }
   }
 }

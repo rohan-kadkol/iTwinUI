@@ -4,7 +4,7 @@
 
 $input-size: $iui-icons-default;
 
-@mixin iui-inputs-checkbox-radio {
+@mixin iui-checkbox-radio-wrapper {
   @include iui-reset;
   display: flex;
   align-items: center;
@@ -17,85 +17,8 @@ $input-size: $iui-icons-default;
     color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-2));
   }
 
-  input[type='checkbox'],
-  input[type='radio'] {
-    @include iui-reset;
-    @include iui-focus($thickness: 2px);
-    display: inline-block;
-    flex-shrink: 0;
-    position: relative;
-    appearance: none;
-    width: $input-size;
-    height: $input-size;
-    box-sizing: border-box;
-    transition: border-color $iui-speed-fast ease;
-    cursor: pointer;
-    @include themed {
-      border: 1px solid rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-4));
-      background-color: t(iui-color-background-1);
-    }
-
-    &:enabled:hover {
-      @include themed {
-        border-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-2));
-      }
-
-      &::before {
-        @include themed {
-          background-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-6));
-        }
-      }
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-      @include themed {
-        background-color: t(iui-color-background-disabled);
-        border-color: t(iui-color-background-disabled);
-      }
-
-      &:checked::after,
-      &:indeterminate::after {
-        @include themed {
-          background-color: t(iui-icons-color-actionable-disabled);
-        }
-      }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: ($iui-line-height - $input-size) * -1;
-      border-radius: 50%;
-      transition: background-color $iui-speed-fast ease;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-size: $input-size;
-    }
-
-    &:checked,
-    &:indeterminate {
-      &:enabled {
-        @include themed {
-          border-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-3));
-        }
-      }
-
-      &::after {
-        @include themed {
-          background-color: t(iui-color-foreground-primary);
-        }
-      }
-    }
-  }
-
-  &.iui-disabled {
+  &.iui-disabled,
+  &.iui-loading {
     &,
     .iui-label {
       cursor: not-allowed;
@@ -108,6 +31,34 @@ $input-size: $iui-icons-default;
       @include themed {
         fill: t(iui-icons-color-actionable-disabled);
       }
+    }
+  }
+
+  &.iui-disabled,
+  &.iui-disabled .iui-label {
+    cursor: not-allowed;
+  }
+
+  &.iui-loading {
+    &,
+    .iui-label {
+      cursor: wait;
+    }
+
+    .iui-checkbox:disabled {
+      border-color: transparent;
+      background-color: transparent;
+      cursor: wait;
+    }
+
+    .iui-progress-indicator-radial {
+      position: absolute;
+      width: $input-size;
+      height: $input-size;
+    }
+
+    .iui-label ~ .iui-progress-indicator-radial {
+      right: 0;
     }
   }
 
@@ -170,4 +121,78 @@ $input-size: $iui-icons-default;
     }
   }
   // #endregion
+}
+
+@mixin iui-checkbox-radio {
+  @include iui-reset;
+  @include iui-focus($thickness: 2px, $offset: -1px);
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  appearance: none;
+  width: $input-size;
+  height: $input-size;
+  isolation: isolate;
+  cursor: pointer;
+  @include themed {
+    background-color: t(iui-color-background-1);
+    border-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-4));
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: border-color $iui-speed-fast ease-out;
+    border-radius: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: inherit;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: $input-size;
+  }
+
+  &:checked,
+  &:indeterminate {
+    &:enabled {
+      @include themed {
+        border-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-3));
+      }
+    }
+
+    &::after {
+      @include themed {
+        background-color: t(iui-color-foreground-primary);
+      }
+    }
+  }
+
+  &:enabled:hover {
+    @include themed {
+      border-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-2));
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    @include themed {
+      background-color: t(iui-color-background-disabled);
+      border-color: t(iui-color-background-disabled);
+    }
+
+    &:checked::after,
+    &:indeterminate::after {
+      @include themed {
+        background-color: t(iui-icons-color-actionable-disabled);
+      }
+    }
+  }
 }

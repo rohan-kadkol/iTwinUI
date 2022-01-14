@@ -52,6 +52,10 @@
   @include iui-select;
 }
 
+.iui-checkbox-radio-wrapper {
+  @include iui-checkbox-radio-wrapper;
+}
+
 .iui-checkbox {
   @include iui-checkbox;
 }

@@ -66,8 +66,7 @@
   // #endregion
 
   // Appropriate spacing even if no text label is given
-  .iui-checkbox,
-  .iui-radio {
+  .iui-checkbox-radio-wrapper {
     min-height: $iui-line-height;
   }
 
@@ -124,8 +123,7 @@
       display: flex;
       gap: $iui-m;
 
-      > .iui-checkbox,
-      > .iui-radio,
+      > .iui-checkbox-radio-wrapper,
       > .iui-toggle-switch {
         margin-right: $iui-m;
 
