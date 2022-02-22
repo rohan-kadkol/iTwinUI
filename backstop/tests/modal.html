@@ -55,43 +55,66 @@
       class="iui-modal"
       id="myModal"
     >
-      <div class="iui-modal-dialog">
+      <div
+        class="iui-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+      >
         <div class="iui-title-bar">
-          <div class="iui-title">Title</div>
-          <button
-            aria-label="Close"
-            type="button"
+          <div class="iui-title">This is the title</div><button
             class="iui-button iui-borderless iui-small"
-          >
-            <svg-close
+            type="button"
+            aria-label="Close"
+          ><svg
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
               class="iui-button-icon"
               aria-hidden="true"
-            ></svg-close>
-          </button>
+            >
+              <path d="m14 0-6 6-6-6-2 2 6 6-6 6 2 2 6-6 6 6 2-2-6-6 6-6"></path>
+            </svg></button>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div class="iui-button-bar">
-          <button
+        <div class="iui-input-container iui-with-message">
+          <div class="iui-label">Radio group</div>
+          <div class="iui-input-group"><label class="iui-radio-wrapper"><input
+                class="iui-radio"
+                type="radio"
+                name="choice"
+                value="option1"
+              ><span class="iui-radio-label"><svg
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m8 12.5a5.1892 5.1892 0 0 1 -3.8716-1.666.49964.49964 0 1 1 .7432-.668 4.19111 4.19111 0 0 0 3.1284 1.334 4.19111 4.19111 0 0 0 3.1284-1.334.49964.49964 0 1 1 .7432.668 5.1892 5.1892 0 0 1 -3.8716 1.666zm3-7.5a1.14609 1.14609 0 0 1 1 1.25 1.14609 1.14609 0 0 1 -1 1.25 1.14609 1.14609 0 0 1 -1-1.25 1.14609 1.14609 0 0 1 1-1.25zm-6 0a1.14609 1.14609 0 0 1 1 1.25 1.14609 1.14609 0 0 1 -1 1.25 1.14609 1.14609 0 0 1 -1-1.25 1.14609 1.14609 0 0 1 1-1.25zm3-5a8 8 0 1 0 8 8 8 8 0 0 0 -8-8z"
+                  ></path>
+                </svg></span></label><label class="iui-radio-wrapper"><input
+                class="iui-radio"
+                type="radio"
+                name="choice"
+                value="option2"
+              ><span class="iui-radio-label"><svg
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m11.5 12.5a.4978.4978 0 0 1 -.3721-.166 4.18825 4.18825 0 0 0 -3.1279-1.334 4.18825 4.18825 0 0 0 -3.1279 1.334.5.5 0 1 1 -.7479-.6639l.0037-.0042a5.18983 5.18983 0 0 1 3.8721-1.6659 5.18955 5.18955 0 0 1 3.8721 1.666.5.5 0 0 1 -.3721.834zm-.5-7.5a1.14609 1.14609 0 0 1 1 1.25 1.14609 1.14609 0 0 1 -1 1.25 1.14609 1.14609 0 0 1 -1-1.25 1.14609 1.14609 0 0 1 1-1.25zm-6 0a1.14609 1.14609 0 0 1 1 1.25 1.14609 1.14609 0 0 1 -1 1.25 1.14609 1.14609 0 0 1 -1-1.25 1.14609 1.14609 0 0 1 1-1.25zm3-5a8 8 0 1 0 8 8 8 8 0 0 0 -8-8z"
+                  ></path>
+                </svg></span></label></div>
+          <div class="iui-message">Tell me how happy you are</div>
+        </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</div>
+        <div class="iui-button-bar"><button
             class="iui-button iui-high-visibility"
-            onclick="openModal()"
-          >
-            <span class="iui-button-label">Proceed</span>
-          </button>
-          <button
+            type="button"
+          ><span class="iui-button-label">Primary</span></button><button
             class="iui-button iui-default"
-            onclick="openModal()"
-          >
-            <span class="iui-button-label">Cancel</span>
-          </button>
-        </div>
+            type="button"
+          ><span class="iui-button-label">Secondary</span></button></div>
       </div>
     </div>
   </body>
