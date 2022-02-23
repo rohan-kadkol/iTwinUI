@@ -1,0 +1,74 @@
+<!--
+  Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+  See LICENSE.md in the project root for license terms and full copyright notice.
+-->
+<!DOCTYPE html>
+<html
+  lang="en-US"
+  id="theme"
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+    <title>GDPR consent banner | iTwinUI</title>
+    <link
+      rel="stylesheet"
+      href="../../lib/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/demo.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.skypack.dev/@itwin/itwinui-icons-elements/close"
+    ></script>
+    <script src="../assets/theme.js"></script>
+  </head>
+  <body class="iui-body">
+    <theme-button></theme-button>
+    <h1>GDPR consent banner</h1>
+    <hr />
+
+    <p class="hide-me"><a
+        href="https://gdpr.eu/what-is-gdpr/"
+        target="_blank"
+        class="iui-anchor"
+      >General Data Protection Regulation (GDPR)</a>&nbsp;consent is required on any page that uses cookies.</p>
+
+    <div class="iui-gdpr-consent-banner">
+      <div class="iui-gdpr-consent-banner-title-bar">
+        <div class="iui-gdpr-consent-banner-title-bar-title">Cookie consent</div>
+        <button
+          aria-label="Close"
+          type="button"
+          class="iui-button iui-borderless iui-small"
+        >
+          <svg-close
+            class="iui-button-icon"
+            aria-hidden="true"
+          ></svg-close>
+        </button>
+      </div>
+      <p>We use cookies for the best experience on our website, including to personalize content and ads, to provide
+        social media features and to analyze traffic. These cookies include targeted media cookies and analytics
+        cookies. For more information see our&nbsp;<a
+          href="https://www.bentley.com/cookie-policy"
+          target="_blank"
+          class="iui-anchor"
+        >cookie policy</a>. By clicking accept you agree to our use of cookies. To alter the types of cookies we use
+        click “Cookie Settings”.</p>
+      <div class="iui-gdpr-consent-banner-button-bar">
+        <button class="iui-button iui-high-visibility">
+          <span class="iui-button-label">Accept all</span>
+        </button>
+        <button class="iui-button iui-default">
+          <span class="iui-button-label">Reject all</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

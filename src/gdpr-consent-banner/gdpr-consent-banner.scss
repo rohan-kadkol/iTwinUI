@@ -1,0 +1,49 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '../style/index';
+
+@mixin iui-gdpr-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  padding: $iui-baseline $iui-sm;
+  box-sizing: border-box;
+  z-index: 10001;
+  @include themed {
+    background-color: t(iui-color-background-5);
+  }
+
+  &-title-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: $iui-baseline;
+    justify-content: space-between;
+
+    &-title {
+      font-size: $iui-font-size-subheading;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-button-bar {
+    margin-top: $iui-baseline;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $iui-s;
+
+    // #region IE solution
+    > .iui-button:not(:last-child) {
+      margin-right: $iui-s;
+
+      @supports (gap: $iui-s) {
+        margin-right: 0;
+      }
+    }
+    // #endregion IE solution
+  }
+} ;
