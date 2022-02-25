@@ -5,6 +5,10 @@
 .iui-modal {
   @include iui-modal;
 
+  &-dialog {
+    @include iui-modal-dialog;
+  }
+
   &-full-page {
     @include iui-modal-full-page;
   }
