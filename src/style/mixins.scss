@@ -70,15 +70,17 @@
   }
 
   &::-webkit-scrollbar {
-    width: $iui-s;
-    height: $iui-s;
+    width: $iui-sm;
+    height: $iui-sm;
   }
 
   &::-webkit-scrollbar-thumb {
     @include themed {
       background-color: rgba(t(iui-color-foreground-body-rgb), t(iui-opacity-4));
     }
-    border-radius: $iui-s * 0.5;
+    border-radius: $iui-border-radius-round;
+    border: $iui-xxs solid transparent;
+    background-clip: content-box;
 
     &:hover {
       @include themed {
