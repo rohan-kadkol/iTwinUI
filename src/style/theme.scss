@@ -2,26 +2,34 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 
 // LIGHT THEME //
+$light-h: 0;
+$light-s: 0%;
+$light-l: 100%;
+$light-primary-h: 203;
+$light-positive-h: 95;
+$light-warning-h: 33;
+$light-negative-h: 0;
+
 // Light theme > Background
-$iui-color-background-1--light: hsl(0, 0%, 100%);
-$iui-color-background-2--light: hsl(220, 27%, 98%);
-$iui-color-background-3--light: hsl(216, 17%, 94%);
-$iui-color-background-4--light: hsl(206, 11%, 88%);
-$iui-color-background-5--light: hsl(210, 10%, 80%);
-$iui-color-background-primary--light: hsl(203, 100%, 44%);
-$iui-color-background-positive--light: hsl(95, 72%, 37%);
-$iui-color-background-negative--light: hsl(0, 91%, 43%);
-$iui-color-background-warning--light: hsl(33, 89%, 51%);
+$iui-color-background-1--light: hsl($light-h, $light-s, $light-l);
+$iui-color-background-2--light: hsl($light-h, $light-s, ($light-l - 2));
+$iui-color-background-3--light: hsl($light-h, $light-s, ($light-l - 6));
+$iui-color-background-4--light: hsl($light-h, $light-s, ($light-l - 12));
+$iui-color-background-5--light: hsl($light-h, $light-s, ($light-l - 20));
+$iui-color-background-primary--light: hsl($light-primary-h, 100%, 40%);
+$iui-color-background-positive--light: hsl($light-positive-h, 100%, 40%);
+$iui-color-background-negative--light: hsl($light-negative-h, 100%, 40%);
+$iui-color-background-warning--light: hsl($light-warning-h, 100%, 40%);
 $iui-color-background-disabled--light: $iui-color-background-3--light;
 
 // Light theme > Foreground
 $iui-color-foreground-body--light: hsl(0, 0%, 0%);
 $iui-color-foreground-body-invert--light: hsl(0, 0%, 100%);
 $iui-color-foreground-accessory--light: hsl(0, 0%, 100%);
-$iui-color-foreground-primary--light: hsl(203, 100%, 44%);
-$iui-color-foreground-positive--light: hsl(95, 72%, 37%);
-$iui-color-foreground-negative--light: hsl(0, 91%, 43%);
-$iui-color-foreground-warning--light: hsl(33, 89%, 51%);
+$iui-color-foreground-primary--light: hsl($light-primary-h, 100%, 30%);
+$iui-color-foreground-positive--light: hsl($light-positive-h, 100%, 30%);
+$iui-color-foreground-negative--light: hsl($light-negative-h, 100%, 30%);
+$iui-color-foreground-warning--light: hsl($light-warning-h, 100%, 30%);
 
 // Light theme > Overlays
 $iui-color-background-1-overlay--light: darken($iui-color-background-1--light, 5%);
@@ -57,24 +65,24 @@ $iui-icons-color-warning--light: $iui-color-foreground-warning--light;
 
 // LIGHT HIGH CONTRAST THEME //
 // Light high contrast theme > Background
-$iui-color-background-1--light-hc: hsl(0, 0%, 100%);
-$iui-color-background-2--light-hc: hsl(0, 0%, 95%);
-$iui-color-background-3--light-hc: hsl(0, 0%, 90%);
-$iui-color-background-4--light-hc: hsl(0, 0%, 85%);
-$iui-color-background-5--light-hc: hsl(0, 0%, 80%);
-$iui-color-background-primary--light-hc: hsl(203, 100%, 33%);
-$iui-color-background-positive--light-hc: hsl(95, 84%, 25%);
-$iui-color-background-negative--light-hc: hsl(0, 91%, 38%);
-$iui-color-background-warning--light-hc: hsl(33, 90%, 31%);
+$iui-color-background-1--light-hc: hsl($light-h, $light-s, $light-l);
+$iui-color-background-2--light-hc: hsl($light-h, $light-s, ($light-l - 5));
+$iui-color-background-3--light-hc: hsl($light-h, $light-s, ($light-l - 10));
+$iui-color-background-4--light-hc: hsl($light-h, $light-s, ($light-l - 15));
+$iui-color-background-5--light-hc: hsl($light-h, $light-s, ($light-l - 20));
+$iui-color-background-primary--light-hc: hsl($light-primary-h, 100%, 30%);
+$iui-color-background-positive--light-hc: hsl($light-positive-h, 100%, 30%);
+$iui-color-background-negative--light-hc: hsl($light-negative-h, 100%, 30%);
+$iui-color-background-warning--light-hc: hsl($light-warning-h, 100%, 30%);
 $iui-color-background-disabled--light-hc: $iui-color-background-3--light-hc;
 
 // Light high contrast theme > Foreground
 $iui-color-foreground-body--light-hc: hsl(0, 0%, 0%);
 $iui-color-foreground-accessory--light-hc: hsl(0, 0%, 100%);
-$iui-color-foreground-primary--light-hc: hsl(203, 100%, 33%);
-$iui-color-foreground-positive--light-hc: hsl(95, 84%, 25%);
-$iui-color-foreground-negative--light-hc: hsl(0, 91%, 38%);
-$iui-color-foreground-warning--light-hc: hsl(33, 90%, 31%);
+$iui-color-foreground-primary--light-hc: hsl($light-primary-h, 100%, 25%);
+$iui-color-foreground-positive--light-hc: hsl($light-positive-h, 100%, 25%);
+$iui-color-foreground-negative--light-hc: hsl($light-negative-h, 100%, 25%);
+$iui-color-foreground-warning--light-hc: hsl($light-warning-h, 100%, 25%);
 
 // Light high contrast theme > Overlays
 $iui-color-background-1-overlay--light-hc: darken($iui-color-background-1--light-hc, 10%);
@@ -109,12 +117,16 @@ $iui-icons-color-negative--light-hc: $iui-color-foreground-negative--light-hc;
 $iui-icons-color-warning--light-hc: $iui-color-foreground-warning--light-hc;
 
 // DARK THEME //
+$dark-h: 204;
+$dark-s: 12%;
+$dark-l: 20%;
+
 // Dark theme > Background
-$iui-color-background-1--dark: hsl(204, 12%, 40%);
-$iui-color-background-2--dark: hsl(202, 12%, 35%);
-$iui-color-background-3--dark: hsl(204, 13%, 31%);
-$iui-color-background-4--dark: hsl(200, 14%, 25%);
-$iui-color-background-5--dark: hsl(200, 14%, 21%);
+$iui-color-background-1--dark: hsl($dark-h, $dark-s, $dark-l);
+$iui-color-background-2--dark: hsl($dark-h, $dark-s, ($dark-l - 5));
+$iui-color-background-3--dark: hsl($dark-h, $dark-s, ($dark-l + 10));
+$iui-color-background-4--dark: hsl($dark-h, $dark-s, ($dark-l + 20));
+$iui-color-background-5--dark: hsl($dark-h, $dark-s, ($dark-l + 30));
 $iui-color-background-primary--dark: hsl(203, 100%, 44%);
 $iui-color-background-positive--dark: hsl(95, 72%, 37%);
 $iui-color-background-negative--dark: hsl(0, 91%, 43%);
@@ -164,11 +176,11 @@ $iui-icons-color-warning--dark: $iui-color-foreground-warning--dark;
 
 // DARK HIGH CONTRAST THEME //
 // Dark high contrast theme > Background
-$iui-color-background-1--dark-hc: hsl(200, 5%, 12%);
-$iui-color-background-2--dark-hc: hsl(200, 9%, 6%);
-$iui-color-background-3--dark-hc: hsl(200, 3%, 20%);
-$iui-color-background-4--dark-hc: hsl(180, 1%, 30%);
-$iui-color-background-5--dark-hc: hsl(0, 0%, 41%);
+$iui-color-background-1--dark-hc: hsl($dark-h, $dark-s, ($dark-l - 10));
+$iui-color-background-2--dark-hc: hsl($dark-h, $dark-s, ($dark-l - 15));
+$iui-color-background-3--dark-hc: hsl($dark-h, $dark-s, $dark-l);
+$iui-color-background-4--dark-hc: hsl($dark-h, $dark-s, ($dark-l + 10));
+$iui-color-background-5--dark-hc: hsl($dark-h, $dark-s, ($dark-l + 20));
 $iui-color-background-primary--dark-hc: hsl(202, 100%, 36%);
 $iui-color-background-positive--dark-hc: hsl(95, 100%, 25%);
 $iui-color-background-negative--dark-hc: hsl(323, 82%, 46%);
