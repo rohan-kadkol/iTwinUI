@@ -1,4 +1,4 @@
-const THEMEAVAILABLE = ['iui-theme-light', 'iui-theme-dark', 'iui-theme-light-hc', 'iui-theme-dark-hc'];
+const THEMEAVAILABLE = ['iui-theme-light', 'iui-theme-light-hc', 'iui-theme-dark', 'iui-theme-dark-hc'];
 
 class ThemeButton extends HTMLElement {
   constructor() {
