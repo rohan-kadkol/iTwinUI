@@ -63,7 +63,7 @@
   }
 }
 
-@mixin iui-text-highlight($status: primary) {
+@mixin iui-text-selection($status: primary) {
   &::selection,
   *::selection {
     @include themed {

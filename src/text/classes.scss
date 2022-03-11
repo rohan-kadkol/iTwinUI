@@ -27,6 +27,22 @@
   @include iui-text(small);
 }
 
+.iui-text-primary {
+  @include iui-text-color;
+}
+
+.iui-text-positive {
+  @include iui-text-color(positive);
+}
+
+.iui-text-warning {
+  @include iui-text-color(warning);
+}
+
+.iui-text-negative {
+  @include iui-text-color(negative);
+}
+
 .iui-text-muted {
   @include iui-text-muted;
 }

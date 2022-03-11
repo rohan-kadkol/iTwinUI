@@ -40,3 +40,53 @@
   font-weight: map-get($weights, $type);
   line-height: map-get($line-heights, $type);
 }
+
+@mixin iui-text-color($color: primary) {
+  @include iui-text-selection($color);
+  @include themed {
+    color: t(iui-color-foreground-#{$color});
+  }
+}
+
+@mixin iui-text-muted {
+  @include themed {
+    color: t(iui-text-color-muted);
+  }
+}
+
+@mixin iui-text-skeleton {
+  display: inline-block;
+  user-select: none;
+  color: transparent;
+  border-radius: $iui-border-radius;
+
+  @include themed {
+    background: linear-gradient(
+      270deg,
+      t(iui-color-background-3),
+      t(iui-color-background-3),
+      t(iui-color-background-2),
+      t(iui-color-background-3),
+      t(iui-color-background-3)
+    );
+    background-size: 200% 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: skeleton-shimmer $iui-speed-slow linear infinite;
+
+    @keyframes skeleton-shimmer {
+      0% {
+        background-position: 200% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+}
