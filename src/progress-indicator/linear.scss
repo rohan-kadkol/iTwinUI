@@ -71,7 +71,7 @@
       }
 
       > span {
-        @include iui-text-highlight(positive);
+        @include iui-text-selection(positive);
       }
     }
   }
@@ -97,7 +97,7 @@
       }
 
       > span {
-        @include iui-text-highlight(negative);
+        @include iui-text-selection(negative);
       }
     }
   }

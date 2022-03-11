@@ -26,7 +26,7 @@
 [class*='iui-'],
 [class*='iui-'] * {
   // Text highlight
-  @include iui-text-highlight;
+  @include iui-text-selection;
 
   // Scrollbar
   @include iui-scrollbar;

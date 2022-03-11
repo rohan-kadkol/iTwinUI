@@ -391,7 +391,7 @@
       box-shadow: inset $iui-xxs 0 0 0 t(iui-icons-color-#{$status});
     }
 
-    @include iui-text-highlight($status);
+    @include iui-text-selection($status);
   }
 
   .iui-cell-end-icon svg {
@@ -406,7 +406,7 @@
     background-color: rgba(t(iui-color-foreground-#{$status}-rgb), t(iui-opacity-6));
   }
 
-  @include iui-text-highlight($status);
+  @include iui-text-selection($status);
 }
 
 @mixin iui-table-cell-icon {

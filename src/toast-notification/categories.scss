@@ -10,7 +10,7 @@
   }
 
   > .iui-message {
-    @include iui-text-highlight($category);
+    @include iui-text-selection($category);
   }
 
   > .iui-status-area {

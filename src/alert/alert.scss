@@ -79,7 +79,7 @@
   }
 
   #{$rootSelector}-message {
-    @include iui-text-highlight($statusColor);
+    @include iui-text-selection($statusColor);
   }
 
   #{$rootSelector}-link {

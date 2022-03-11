@@ -300,7 +300,7 @@
 /// @arg iconSelector - selector to apply status fill on. Defaults to .iui-input-icon
 /// @arg textSelector - selector to apply text color on. Defaults to .iui-message
 @mixin iui-input-status($status, $iconSelector: '.iui-input-icon', $textSelector: '.iui-message') {
-  @include iui-text-highlight($status);
+  @include iui-text-selection($status);
 
   #{$iconSelector} {
     @include themed {
