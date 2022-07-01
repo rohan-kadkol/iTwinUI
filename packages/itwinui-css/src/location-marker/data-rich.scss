@@ -9,7 +9,7 @@
 
   > .iui-location-marker-data-rich-body {
     min-width: $iui-icons-xl;
-    border-radius: $iui-border-radius;
+    border-radius: var(--iui-border-radius-1);
     text-align: center;
     font-size: $iui-font-size-leading;
     padding: round($iui-baseline * 0.25) $iui-s;

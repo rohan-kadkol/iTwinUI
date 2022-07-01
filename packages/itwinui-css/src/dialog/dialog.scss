@@ -19,7 +19,7 @@ $iui-dialog-width: 380px;
 @mixin iui-dialog {
   z-index: 999;
   isolation: isolate;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   box-shadow: $iui-elevation-24;
   position: fixed;
   padding: $iui-baseline $iui-m;

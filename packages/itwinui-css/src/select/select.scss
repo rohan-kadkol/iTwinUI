@@ -9,7 +9,7 @@
   @include iui-focus($offset: -2px, $thickness: 2px);
   width: 100%;
   margin: 0;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   padding: $iui-component-padding-vertical $iui-component-padding-horizontal;
   min-height: $iui-component-height;
   transition: border-color $iui-speed-fast ease-out;
@@ -18,7 +18,7 @@
   user-select: none;
   position: relative;
   overflow: hidden;
-  color: var(--iui-text-color);
+  color: var(--iui-color-foreground-2);
   background-color: var(--iui-color-background-1);
   border: 1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4));
 

@@ -65,11 +65,11 @@
     .iui-stepper-circle {
       border: 1px solid var(--iui-color-background-border);
       background-color: var(--iui-color-background-1);
-      color: var(--iui-text-color-muted);
+      color: var(--iui-color-foreground-4);
     }
 
     .iui-stepper-step-name {
-      color: var(--iui-text-color-muted);
+      color: var(--iui-color-foreground-4);
     }
 
     .iui-stepper-track-content::before,

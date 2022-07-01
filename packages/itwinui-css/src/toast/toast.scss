@@ -11,7 +11,7 @@
   pointer-events: all;
   margin: 0 $iui-m $iui-baseline $iui-m;
   min-height: $iui-baseline * 4;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   background-color: var(--iui-color-background-1);
   border: 1px solid var(--iui-color-foreground-body);
   box-shadow: 0 0 0 1px rgba(var(--iui-color-foreground-accessory-rgb), var(--iui-opacity-4)), $iui-elevation-24;
@@ -42,12 +42,12 @@
     line-height: $iui-line-height;
     font-weight: $iui-font-weight-normal;
     font-style: normal;
-    color: var(--iui-text-color);
+    color: var(--iui-color-foreground-2);
   }
 
   &-anchor {
     @include iui-anchor-underline('on-initial');
-    border-radius: $iui-border-radius;
+    border-radius: var(--iui-border-radius-1);
     cursor: pointer;
     font-size: $iui-font-size-small;
     margin-right: $iui-m;

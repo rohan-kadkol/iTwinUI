@@ -21,7 +21,7 @@
     background-color: transparent;
     width: 100%;
     justify-content: center;
-    border-radius: $iui-border-radius;
+    border-radius: var(--iui-border-radius-1);
 
     &::after {
       bottom: 0;

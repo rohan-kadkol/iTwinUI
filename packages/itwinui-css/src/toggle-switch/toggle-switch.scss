@@ -18,7 +18,7 @@
   // Disabled
   &.iui-disabled {
     cursor: not-allowed;
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
     @media (forced-colors: active) {
       color: GrayText;
     }
@@ -158,7 +158,7 @@
 
     ~ .iui-toggle-switch-icon {
       opacity: 0;
-      fill: var(--iui-icons-color-actionable);
+      fill: var(--iui-color-foreground-2);
     }
 
     &:checked {

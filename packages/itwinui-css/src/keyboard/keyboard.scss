@@ -4,7 +4,7 @@
 
 @mixin iui-keyboard {
   @include iui-reset;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   display: inline-block;
   font-size: $iui-font-size-small;
   font-weight: $iui-font-weight-semibold;

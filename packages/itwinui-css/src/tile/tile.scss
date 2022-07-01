@@ -100,7 +100,7 @@
     font-size: $iui-font-size-leading;
     user-select: all;
     margin-bottom: $iui-baseline * 0.5;
-    color: var(--iui-text-color);
+    color: var(--iui-color-foreground-2);
   }
 
   .iui-tile-status-icon {
@@ -121,7 +121,7 @@
     height: 100%;
     max-height: $iui-baseline * 6;
     @include iui-line-clamp(3);
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
   }
 
   .iui-tile-metadata {
@@ -134,7 +134,7 @@
     display: flex;
     align-items: center;
     margin-top: auto;
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
 
     > svg,
     .iui-tile-metadata-icon {

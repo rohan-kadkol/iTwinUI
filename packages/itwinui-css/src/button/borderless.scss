@@ -16,7 +16,7 @@
   @include iui-button-size(medium, borderless);
 
   &:hover {
-    background-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6));
+    background-color: var(--iui-color-background-transparent-hover);
     border-color: transparent;
   }
 

@@ -78,7 +78,7 @@ $iui-date-picker-today-circle-size: 32px;
   text-align: center;
   width: $iui-date-picker-cell-width;
   height: $iui-date-picker-cell-height;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   font-variant-numeric: tabular-nums;
 }
 
@@ -206,7 +206,7 @@ $iui-date-picker-today-circle-size: 32px;
 
     border-radius: 0;
     background-color: rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-5));
-    color: var(--iui-text-color);
+    color: var(--iui-color-foreground-2);
 
     &:hover {
       font-weight: $iui-font-weight-semibold;
@@ -219,7 +219,7 @@ $iui-date-picker-today-circle-size: 32px;
 
     &:hover {
       background-color: rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-5));
-      color: var(--iui-text-color);
+      color: var(--iui-color-foreground-2);
 
       &::before {
         background-color: rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-4));
@@ -237,7 +237,7 @@ $iui-date-picker-today-circle-size: 32px;
   &-today {
     @include iui-calendar-day-base;
     @include iui-calendar-day-base-hover;
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
   }
 
   &-today {

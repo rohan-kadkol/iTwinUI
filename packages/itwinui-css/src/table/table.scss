@@ -138,7 +138,7 @@
 
     .iui-sort {
       visibility: visible;
-      fill: var(--iui-icons-color-actionable);
+      fill: var(--iui-color-foreground-2);
     }
   }
 }
@@ -301,7 +301,7 @@
     &.iui-expanded-content.iui-disabled {
       font-style: italic;
       cursor: not-allowed;
-      color: var(--iui-text-color-muted);
+      color: var(--iui-color-foreground-4);
 
       &.iui-slot:hover > .iui-more-options {
         visibility: hidden;
@@ -338,7 +338,7 @@
     align-items: center;
     flex-grow: 1;
     align-self: center;
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
     background-color: var(--iui-color-background-1);
   }
 }

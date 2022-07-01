@@ -10,11 +10,11 @@
   font-size: $iui-font-size;
   font-weight: $iui-font-weight-normal;
   line-height: $iui-line-height;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   appearance: none;
   padding: $iui-component-padding-vertical $iui-component-padding-horizontal;
   min-height: $iui-component-height;
-  color: var(--iui-text-color);
+  color: var(--iui-color-foreground-2);
   background-color: var(--iui-color-background-1);
   border: 1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4));
   @media (prefers-reduced-motion: no-preference) {

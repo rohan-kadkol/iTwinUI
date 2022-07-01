@@ -129,6 +129,6 @@ $tick-height: $iui-baseline; // 11px
   .iui-slider-max,
   .iui-slider-tick {
     user-select: none;
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
   }
 }

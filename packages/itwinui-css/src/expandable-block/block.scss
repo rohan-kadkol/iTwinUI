@@ -37,7 +37,7 @@
       @media (prefers-reduced-motion: no-preference) {
         transition: transform $iui-speed-fast ease-out;
       }
-      fill: var(--iui-icons-color-actionable);
+      fill: var(--iui-color-foreground-2);
     }
 
     > .iui-status-icon {
@@ -54,7 +54,7 @@
       @media (prefers-reduced-motion: no-preference) {
         transition: color $iui-speed-fast ease;
       }
-      color: var(--iui-text-color);
+      color: var(--iui-color-foreground-2);
     }
 
     .iui-title,
@@ -70,7 +70,7 @@
 
     .iui-caption {
       font-size: $iui-font-size-small;
-      color: var(--iui-text-color-muted);
+      color: var(--iui-color-foreground-4);
     }
 
     @include iui-focus;
@@ -151,7 +151,7 @@
     }
 
     .iui-header {
-      border-radius: $iui-border-radius;
+      border-radius: var(--iui-border-radius-1);
 
       &:hover {
         background-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6));

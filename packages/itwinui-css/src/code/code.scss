@@ -8,8 +8,8 @@
   font-family: $iui-monospace;
   font-size: $iui-font-size-small;
   padding: 0 $iui-xs;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   user-select: all;
   background-color: var(--iui-color-background-3);
-  color: var(--iui-text-color);
+  color: var(--iui-color-foreground-2);
 }

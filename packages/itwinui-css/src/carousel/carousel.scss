@@ -7,7 +7,7 @@
 @mixin iui-carousel {
   overflow: hidden;
   @include iui-focus($offset: 4px);
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
 }
 
 @mixin iui-carousel-slider {
@@ -49,7 +49,7 @@
     @include iui-focus;
     flex: 2;
     max-width: $iui-xxl * 4;
-    border-radius: $iui-border-radius;
+    border-radius: var(--iui-border-radius-1);
     white-space: nowrap;
     @include hide-scrollbar;
   }

@@ -14,7 +14,7 @@
   @include iui-tag-base;
 
   &:not(a) {
-    color: var(--iui-text-color-muted);
+    color: var(--iui-color-foreground-4);
   }
 }
 
@@ -33,7 +33,7 @@
   -webkit-tap-highlight-color: transparent;
   border: 1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4));
   background-color: var(--iui-color-background-1);
-  color: var(--iui-text-color);
+  color: var(--iui-color-foreground-2);
 
   &:hover {
     border-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-1));
@@ -57,7 +57,7 @@
 }
 
 @mixin iui-tag-container {
-  color: var(--iui-text-color-muted);
+  color: var(--iui-color-foreground-4);
 
   > a.iui-tag-basic {
     margin: $iui-xxs;
@@ -81,7 +81,7 @@
   }
 
   &.iui-visible {
-    border-radius: $iui-border-radius;
+    border-radius: var(--iui-border-radius-1);
     padding: $iui-component-offset $iui-sm;
     background-color: var(--iui-color-background-3);
   }

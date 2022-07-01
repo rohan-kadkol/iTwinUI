@@ -18,7 +18,7 @@
     min-height: $iui-component-height;
     height: 100%;
     cursor: pointer;
-    color: var(--iui-text-color);
+    color: var(--iui-color-foreground-2);
     transition: background-color $iui-speed-fast ease-out;
 
     &.iui-active {
@@ -35,10 +35,10 @@
 
     &[disabled] {
       cursor: not-allowed;
-      color: var(--iui-text-color-muted);
+      color: var(--iui-color-foreground-4);
 
       .iui-tab-icon {
-        fill: var(--iui-icons-color-actionable-disabled);
+        fill: var(--iui-color-foreground-5);
       }
     }
 
@@ -49,7 +49,7 @@
     width: $iui-icons-default;
     height: $iui-icons-default;
     flex-shrink: 0;
-    fill: var(--iui-icons-color-actionable);
+    fill: var(--iui-color-foreground-2);
     transition: fill $iui-speed-fast ease-out;
 
     + .iui-tab-label {

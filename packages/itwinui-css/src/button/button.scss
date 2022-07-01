@@ -20,7 +20,7 @@ $iui-button-padding-large: $iui-xs * 6;
   vertical-align: middle;
   justify-content: center;
   position: relative;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   line-height: $iui-line-height;
   box-shadow: none;
   font-size: $iui-font-size;

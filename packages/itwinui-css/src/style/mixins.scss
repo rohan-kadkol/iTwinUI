@@ -4,13 +4,13 @@
 
 @mixin no-link {
   text-decoration: none;
-  color: var(--iui-text-color);
+  color: var(--iui-color-foreground-2);
 
   &:link,
   &:visited,
   &:hover,
   &:active {
-    color: var(--iui-text-color);
+    color: var(--iui-color-foreground-2);
     text-decoration: none;
   }
 }
@@ -49,7 +49,7 @@
 }
 
 @mixin iui-scrollbar {
-  scrollbar-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4)) transparent;
+  scrollbar-color: var(--iui-color-foreground-4) transparent;
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -58,11 +58,11 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4));
-    border-radius: $iui-s * 0.5;
+    background-color: var(--iui-color-foreground-4);
+    border-radius: var(--iui-border-radius-round);
 
     &:hover {
-      background-color: rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-3));
+      background-color: var(--iui-color-foreground-3);
     }
   }
 

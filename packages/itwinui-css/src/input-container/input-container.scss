@@ -148,7 +148,7 @@
   font-size: $iui-font-size-small;
   grid-area: message;
   margin-top: $iui-component-offset;
-  color: var(--iui-text-color-muted);
+  color: var(--iui-color-foreground-4);
 
   a {
     user-select: none;
@@ -201,7 +201,7 @@
     @include iui-ripple(var(--iui-color-background-1), var(--iui-color-background-2));
 
     svg {
-      fill: var(--iui-icons-color-actionable);
+      fill: var(--iui-color-foreground-2);
       transition: transform $iui-speed-fast ease-out;
     }
 
@@ -214,7 +214,7 @@
     cursor: not-allowed;
 
     svg {
-      fill: var(--iui-icons-color-actionable-disabled);
+      fill: var(--iui-color-foreground-5);
     }
   }
 }

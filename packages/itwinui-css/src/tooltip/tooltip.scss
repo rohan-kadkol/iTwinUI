@@ -6,7 +6,7 @@
   @include iui-reset;
   display: block;
   text-align: center;
-  border-radius: $iui-border-radius;
+  border-radius: var(--iui-border-radius-1);
   font-size: $iui-font-size-small;
   overflow: hidden;
   max-width: 400px;
