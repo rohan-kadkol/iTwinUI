@@ -103,10 +103,15 @@ class ThemeButton extends HTMLElement {
     this.shadowRoot.querySelector(
       `input[value=${prefersDark ? 'dark' : 'light'}${prefersHC ? '-hc' : ''}`
     ).checked = true;
+    document.documentElement.dataset.iuiTheme = prefersDark ? 'dark' : 'light';
+    document.documentElement.dataset.iuiContrast = prefersHC ? 'high' : undefined;
   }
 
-  changeTheme = ({ target: { value: theme } }) => {
-    document.documentElement.className = `iui-theme-${theme}`;
+  changeTheme = ({ target: { value: _theme } }) => {
+    const isHighContrast = _theme.endsWith('-hc');
+    const theme = isHighContrast ? _theme.split('-')[0] : _theme;
+    document.documentElement.dataset.iuiTheme = theme;
+    document.documentElement.dataset.iuiContrast = isHighContrast ? 'high' : undefined;
     this.shadowRoot.querySelector('#theme-color-scheme').innerHTML = `
       :host {
         color-scheme: ${theme.includes('light') ? 'light' : 'dark'};
